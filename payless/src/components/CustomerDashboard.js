@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Bar } from "react-chartjs-2"; // Requires react-chartjs-2 and chart.js
 import { Chart } from "chart.js/auto"; // Register Chart.js components
 Chart.register(); // Ensure Chart.js is registered
+
 // Reusable Navbar Component (Adapted for Dashboard)
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
@@ -324,11 +325,17 @@ const CustomerDashboard = () => {
           </div>
         </Card>
 
-        {/* Apply for BNPL Button */}
-        <div className="text-center">
+        {/* Shop Now and Apply for BNPL Section */}
+        <div className="flex justify-center space-x-6">
+          <Link
+            to="/stores"
+            className="bg-bnpl-blue text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-all duration-200 text-center"
+          >
+            Shop Now
+          </Link>
           <Link
             to="/apply-bnpl"
-            className="bg-bnpl-blue text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-all duration-200"
+            className="bg-bnpl-blue text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-all duration-200 text-center"
           >
             Apply for BNPL
           </Link>

@@ -6,6 +6,7 @@ import MerchantSignup from "./components/MerchantSignup";
 import TermsAndConditions from "./components/TermsAndConditions"; // Add this
 import PrivacyPolicy from "./components/PrivacyPolicy"; // Add this if created
 import Login from "./components/Login";
+import ApplyBNPL from "./components/ApplyBNPL";
 import CustomerDashboard from "./components/CustomerDashboard";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/merchant-signup" element={<MerchantSignup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/customer-dashboard" element={<CustomerDashboard />} />
+        <Route path="/apply-bnpl" element={<ApplyBNPL />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} /> {/* If created */}
       </Routes>
