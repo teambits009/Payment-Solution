@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         "bnpl-blue": "#1E40AF",
         "bnpl-light-blue": "#60A5FA",
+        
       },
     },
   },

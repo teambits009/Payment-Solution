@@ -1,191 +1,210 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const CustomerSignup = () => {
-  const [cameraPhoto, setCameraPhoto] = useState(null);
-  const [idPhoto, setIdPhoto] = useState(null);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    termsAccepted: false,
+  });
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
-  const handleSignupSubmit = (e) => {
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData);
-    if (!data.terms) {
-      alert("You must agree to the Terms and Conditions to sign up.");
+    if (formData.password !== formData.confirmPassword) {
+      alert("Passwords do not match!");
       return;
     }
-    console.log("Customer Signup Data:", { ...data, cameraPhoto, idPhoto });
-    alert("Signing up as a Customer!");
-    // Add actual signup logic here (e.g., API call with formData)
-  };
-
-  const handleCameraPhotoChange = (e) => {
-    setCameraPhoto(e.target.files[0]);
-  };
-
-  const handleIdPhotoChange = (e) => {
-    setIdPhoto(e.target.files[0]);
+    if (!formData.termsAccepted) {
+      alert("You must accept the Terms and Conditions to proceed.");
+      return;
+    }
+    console.log("Customer Signup Data:", formData);
+    // Add customer API call here
+    navigate("/customer-dashboard"); // Redirect to customer dashboard
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-bnpl-blue via-blue-700 to-bnpl-light-blue font-sans flex items-center justify-center py-12 px-6">
-      <div className="max-w-lg w-full bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-xl shadow-2xl border border-white border-opacity-20">
-        <h2 className="text-4xl font-extrabold text-white text-center mb-8 animate-fade-in">
-          Customer Signup
-        </h2>
-        <form onSubmit={handleSignupSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="relative">
-              <label htmlFor="firstName" className="block text-sm font-medium text-white mb-1">
-                First Name
-              </label>
-              <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                placeholder="Enter your first name"
-                className="w-full px-4 py-3 bg-white bg-opacity-20 text-white placeholder-gray-300 rounded-lg border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-bnpl-light-blue focus:bg-opacity-30 transition-all duration-300"
-                required
-              />
-            </div>
-            <div className="relative">
-              <label htmlFor="secondName" className="block text-sm font-medium text-white mb-1">
-                Second Name
-              </label>
-              <input
-                type="text"
-                id="secondName"
-                name="secondName"
-                placeholder="Enter your second name"
-                className="w-full px-4 py-3 bg-white bg-opacity-20 text-white placeholder-gray-300 rounded-lg border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-bnpl-light-blue focus:bg-opacity-30 transition-all duration-300"
-                required
-              />
-            </div>
+    <div className="min-h-screen bg-gray-100 font-sans">
+      {/* Navbar (PayPal-inspired, matched with LandingPage) */}
+      <nav className="bg-bnpl-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
+          <div className="text-2xl font-bold">
+            <Link to="/" className="hover:text-bnpl-light-blue transition">
+              Genesis
+            </Link>
           </div>
-          <div className="relative">
-            <label htmlFor="email" className="block text-sm font-medium text-white mb-1">
-              Email Address
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              className="w-full px-4 py-3 bg-white bg-opacity-20 text-white placeholder-gray-300 rounded-lg border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-bnpl-light-blue focus:bg-opacity-30 transition-all duration-300"
-              required
-            />
+          <div className="hidden md:flex space-x-6 items-center">
+            <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
+              How It Works
+            </Link>
+            <Link to="/customers" className="text-lg hover:text-bnpl-light-blue transition">
+              For Customers
+            </Link>
+            <Link to="/merchants" className="text-lg hover:text-bnpl-light-blue transition">
+              For Merchants
+            </Link>
+            <Link
+              to="/login"
+              className="border border-white px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:border-bnpl-light-blue transition"
+            >
+              Login
+            </Link>
           </div>
-          <div className="relative">
-            <label htmlFor="phoneNumber" className="block text-sm font-medium text-white mb-1">
-              Phone Number
-            </label>
-            <input
-              type="tel"
-              id="phoneNumber"
-              name="phoneNumber"
-              placeholder="Enter your phone number"
-              className="w-full px-4 py-3 bg-white bg-opacity-20 text-white placeholder-gray-300 rounded-lg border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-bnpl-light-blue focus:bg-opacity-30 transition-all duration-300"
-              required
-            />
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-3xl focus:outline-none"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? "✖" : "☰"}
+            </button>
           </div>
-          <div className="relative">
-            <label htmlFor="cameraPhoto" className="block text-sm font-medium text-white mb-1">
-              Camera Photo
-            </label>
-            <input
-              type="file"
-              id="cameraPhoto"
-              name="cameraPhoto"
-              accept="image/*"
-              onChange={handleCameraPhotoChange}
-              className="w-full px-4 py-3 bg-white bg-opacity-20 text-white rounded-lg border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-bnpl-light-blue transition-all duration-300"
-              required
-            />
-            {cameraPhoto && (
-              <p className="text-sm text-gray-200 mt-1">Selected: {cameraPhoto.name}</p>
-            )}
-          </div>
-          <div className="relative">
-            <label htmlFor="idPhoto" className="block text-sm font-medium text-white mb-1">
-              ID Upload Photo
-            </label>
-            <input
-              type="file"
-              id="idPhoto"
-              name="idPhoto"
-              accept="image/*"
-              onChange={handleIdPhotoChange}
-              className="w-full px-4 py-3 bg-white bg-opacity-20 text-white rounded-lg border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-bnpl-light-blue transition-all duration-300"
-              required
-            />
-            {idPhoto && (
-              <p className="text-sm text-gray-200 mt-1">Selected: {idPhoto.name}</p>
-            )}
-          </div>
-          <div className="relative">
-            <label htmlFor="password" className="block text-sm font-medium text-white mb-1">
-              Password
-            </label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Create a password"
-              className="w-full px-4 py-3 bg-white bg-opacity-20 text-white placeholder-gray-300 rounded-lg border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-bnpl-light-blue focus:bg-opacity-30 transition-all duration-300"
-              required
-            />
-          </div>
-          <div className="relative">
-            <label htmlFor="confirmPassword" className="block text-sm font-medium text-white mb-1">
-              Confirm Password
-            </label>
-            <input
-              type="password"
-              id="confirmPassword"
-              name="confirmPassword"
-              placeholder="Confirm your password"
-              className="w-full px-4 py-3 bg-white bg-opacity-20 text-white placeholder-gray-300 rounded-lg border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-bnpl-light-blue focus:bg-opacity-30 transition-all duration-300"
-              required
-            />
-          </div>
-          <div className="flex items-center">
-            <input
-              type="checkbox"
-              id="terms"
-              name="terms"
-              className="h-4 w-4 text-bnpl-light-blue bg-white bg-opacity-20 border border-white border-opacity-30 rounded focus:ring-bnpl-light-blue"
-              required
-            />
-            <label htmlFor="terms" className="ml-2 text-sm text-white">
-              I agree to the{" "}
-              <Link to="/terms-and-conditions" className="font-semibold underline hover:text-bnpl-light-blue transition">
-                Terms and Conditions
-              </Link>{" "}
-              and have read the{" "}
-              <Link to="/privacy-policy" className="font-semibold underline hover:text-bnpl-light-blue transition">
-                Privacy Policy
+        </div>
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-bnpl-blue py-4">
+            <div className="flex flex-col space-y-4 text-center">
+              <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
+                How It Works
               </Link>
-            </label>
+              <Link to="/customers" className="text-lg hover:text-bnpl-light-blue transition">
+                For Customers
+              </Link>
+              <Link to="/merchants" className="text-lg hover:text-bnpl-light-blue transition">
+                For Merchants
+              </Link>
+              <Link
+                to="/login"
+                className="border border-white px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:border-bnpl-light-blue transition"
+              >
+                Login
+              </Link>
+            </div>
           </div>
-          <button
-            type="submit"
-            className="w-full bg-bnpl-blue text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-bnpl-light-blue hover:scale-105 transform transition-all duration-300"
-          >
-            Sign Up Now
-          </button>
-        </form>
-        <p className="text-center text-white mt-6">
-          Already have an account?{" "}
-          <Link to="/login" className="underline hover:text-bnpl-light-blue transition">
-            Login here
-          </Link>
-        </p>
-        <p className="text-center text-white mt-2">
-          Are you a merchant?{" "}
-          <Link to="/merchant-signup" className="underline hover:text-bnpl-light-blue transition">
-            Sign up as a Merchant
-          </Link>
-        </p>
-      </div>
+        )}
+      </nav>
+
+      {/* Customer Signup Form (PayPal-inspired) */}
+      <section className="max-w-7xl mx-auto py-12 px-6 flex justify-center">
+        <div className="bg-white p-8 rounded-md shadow-md border border-gray-200 w-full max-w-md">
+          <h1 className="text-3xl font-bold text-black mb-6 text-center">
+            Customer Sign Up
+          </h1>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label htmlFor="fullName" className="block text-gray-700 font-medium mb-2">
+                Full Name
+              </label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                value={formData.fullName}
+                onChange={handleChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="password" className="block text-gray-700 font-medium mb-2">
+                Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="confirmPassword" className="block text-gray-700 font-medium mb-2">
+                Confirm Password
+              </label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
+                required
+              />
+            </div>
+            <div className="flex items-center">
+              <input
+                type="checkbox"
+                id="termsAccepted"
+                name="termsAccepted"
+                checked={formData.termsAccepted}
+                onChange={handleChange}
+                className="h-4 w-4 text-bnpl-blue focus:ring-bnpl-blue border-gray-300 rounded"
+                required
+              />
+              <label htmlFor="termsAccepted" className="ml-2 text-sm text-gray-700">
+                I agree to the{" "}
+                <Link to="/terms" className="text-bnpl-blue hover:underline font-medium">
+                  Terms and Conditions
+                </Link>{" "}
+                and{" "}
+                <Link to="/privacy" className="text-bnpl-blue hover:underline font-medium">
+                  Privacy Policy
+                </Link>
+              </label>
+            </div>
+            <p className="text-sm text-gray-600 text-center">
+              Sign up to enjoy <span className="text-bnpl-blue font-semibold">flexible payments</span>,{" "}
+              <span className="text-bnpl-blue font-semibold">no hidden fees</span>, and shop at{" "}
+              <span className="text-bnpl-blue font-semibold">thousands of stores</span>.
+            </p>
+            <button
+              type="submit"
+              className="w-full bg-bnpl-blue text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-all duration-200"
+            >
+              Sign Up as a Customer
+            </button>
+          </form>
+          <p className="mt-6 text-center text-gray-700">
+            Already have an account?{" "}
+            <Link to="/login" className="text-bnpl-blue hover:underline font-medium">
+              Log In
+            </Link>
+          </p>
+          <p className="mt-2 text-center text-gray-700">
+            Signing up as a merchant?{" "}
+            <Link to="/merchant-signup" className="text-bnpl-blue hover:underline font-medium">
+              Merchant Signup
+            </Link>
+          </p>
+        </div>
+      </section>
     </div>
   );
 };

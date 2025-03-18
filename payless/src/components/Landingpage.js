@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -32,13 +33,13 @@ const LandingPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 font-sans">
-      {/* Navbar Section */}
-      <nav className="bg-bnpl-blue text-white py-4 px-6 sticky top-0 z-50 shadow-lg">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
+      {/* Navbar Section (PayPal-inspired) */}
+      <nav className="bg-bnpl-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="text-2xl font-bold">
-            <a href="/" className="hover:text-bnpl-light-blue">
+            <Link to="/" className="hover:text-bnpl-light-blue transition">
               Genesis
-            </a>
+            </Link>
           </div>
           <div className="hidden md:flex space-x-6 items-center">
             <div
@@ -46,45 +47,45 @@ const LandingPage = () => {
               onMouseEnter={() => setIsHowItWorksDropdownOpen(true)}
               onMouseLeave={() => setIsHowItWorksDropdownOpen(false)}
             >
-              <button className="hover:text-bnpl-light-blue transition flex items-center">
+              <button className="text-lg hover:text-bnpl-light-blue transition flex items-center">
                 How It Works
                 <span className="ml-1">▼</span>
               </button>
               {isHowItWorksDropdownOpen && (
-                <div className="absolute bg-white text-bnpl-blue rounded-lg shadow-lg mt-2 py-2 w-40">
-                  <a
-                    href="/how-it-works#customers"
-                    className="block px-4 py-2 hover:bg-bnpl-light-blue hover:text-white"
+                <div className="absolute bg-white text-bnpl-blue rounded-md shadow-md mt-2 py-2 w-40">
+                  <Link
+                    to="/how-it-works#customers"
+                    className="block px-4 py-2 text-lg hover:bg-bnpl-light-blue hover:text-white transition"
                   >
                     For Customers
-                  </a>
-                  <a
-                    href="/how-it-works#merchants"
-                    className="block px-4 py-2 hover:bg-bnpl-light-blue hover:text-white"
+                  </Link>
+                  <Link
+                    to="/how-it-works#merchants"
+                    className="block px-4 py-2 text-lg hover:bg-bnpl-light-blue hover:text-white transition"
                   >
                     For Merchants
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
-            <a href="/customers" className="hover:text-bnpl-light-blue transition">
+            <Link to="/customers" className="text-lg hover:text-bnpl-light-blue transition">
               For Customers
-            </a>
-            <a href="/merchants" className="hover:text-bnpl-light-blue transition">
+            </Link>
+            <Link to="/merchants" className="text-lg hover:text-bnpl-light-blue transition">
               For Merchants
-            </a>
-            <a
-              href="/customer-signup"
-              className="bg-white text-bnpl-blue px-4 py-2 rounded-lg font-semibold hover:bg-bnpl-light-blue hover:text-white transition"
+            </Link>
+            <Link
+              to="/customer-signup"
+              className="bg-white text-bnpl-blue px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:text-white transition"
             >
               Sign Up
-            </a>
-            <a
-              href="/login"
-              className="border border-white px-4 py-2 rounded-lg font-semibold hover:bg-bnpl-light-blue hover:border-bnpl-light-blue transition"
+            </Link>
+            <Link
+              to="/login"
+              className="border border-white px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:border-bnpl-light-blue transition"
             >
               Login
-            </a>
+            </Link>
           </div>
           <div className="md:hidden">
             <button
@@ -99,88 +100,82 @@ const LandingPage = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-bnpl-blue py-4">
             <div className="flex flex-col space-y-4 text-center">
-              <a href="/how-it-works" className="hover:text-bnpl-light-blue transition">
+              <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
                 How It Works
-              </a>
-              <a href="/customers" className="hover:text-bnpl-light-blue transition">
+              </Link>
+              <Link to="/customers" className="text-lg hover:text-bnpl-light-blue transition">
                 For Customers
-              </a>
-              <a href="/merchants" className="hover:text-bnpl-light-blue transition">
+              </Link>
+              <Link to="/merchants" className="text-lg hover:text-bnpl-light-blue transition">
                 For Merchants
-              </a>
-              <a
-                href="/customer-signup"
-                className="bg-white text-bnpl-blue px-4 py-2 rounded-lg font-semibold hover:bg-bnpl-light-blue hover:text-white transition"
+              </Link>
+              <Link
+                to="/customer-signup"
+                className="bg-white text-bnpl-blue px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:text-white transition"
               >
                 Sign Up
-              </a>
-              <a
-                href="/login"
-                className="border border-white px-4 py-2 rounded-lg font-semibold hover:bg-bnpl-light-blue hover:border-bnpl-light-blue transition"
+              </Link>
+              <Link
+                to="/login"
+                className="border border-white px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:border-bnpl-light-blue transition"
               >
                 Login
-              </a>
+              </Link>
             </div>
           </div>
         )}
       </nav>
 
-      {/* Hero Section */}
-      <header className="bg-bnpl-blue text-white py-28 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+      {/* Hero Section (PayPal-inspired) */}
+      <header className="bg-white py-16 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-black mb-6">
             Shop Now, Pay Later with Ease
           </h1>
-          <p className="text-lg md:text-xl mb-8">
+          <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
             Flexible payments for customers. More sales for merchants.
           </p>
           <div className="flex justify-center gap-4">
-            <a
-              href="/customer-signup"
-              className="bg-white text-bnpl-blue px-6 py-3 rounded-lg font-semibold hover:bg-bnpl-light-blue hover:text-white transition"
+            <Link
+              to="/customer-signup"
+              className="bg-bnpl-blue text-white px-8 py-4 rounded-md font-medium text-lg hover:bg-blue-800 transition-all duration-200"
             >
               Get Started as a Customer
-            </a>
-            <a
-              href="/merchant-signup"
-              className="bg-bnpl-light-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-bnpl-blue transition"
+            </Link>
+            <Link
+              to="/merchant-signup"
+              className="border border-bnpl-blue text-bnpl-blue px-8 py-4 rounded-md font-medium text-lg hover:bg-bnpl-blue hover:text-white transition-all duration-200"
             >
               Join as a Merchant
-            </a>
+            </Link>
           </div>
         </div>
       </header>
 
       {/* Customer Benefits Section */}
-      <section className="max-w-6xl mx-auto py-12 px-6">
-        <h2 className="text-3xl font-bold text-bnpl-blue text-center mb-8">
+      <section className="max-w-7xl mx-auto py-12 px-6">
+        <h2 className="text-3xl font-bold text-black text-center mb-10">
           Why Customers Love Us
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white p-8 rounded-md shadow-md border border-gray-200 text-center">
             <div className="text-bnpl-blue text-4xl mb-4">💸</div>
-            <h3 className="text-xl font-semibold text-bnpl-blue mb-2">
-              Flexible Payments
-            </h3>
-            <p className="text-gray-600">
+            <h3 className="text-xl font-bold text-black mb-4">Flexible Payments</h3>
+            <p className="text-gray-700">
               Split your purchases into 3, 6, or 12 easy installments.
             </p>
           </div>
-          <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+          <div className="bg-white p-8 rounded-md shadow-md border border-gray-200 text-center">
             <div className="text-bnpl-blue text-4xl mb-4">🌟</div>
-            <h3 className="text-xl font-semibold text-bnpl-blue mb-2">
-              No Hidden Fees
-            </h3>
-            <p className="text-gray-600">
+            <h3 className="text-xl font-bold text-black mb-4">No Hidden Fees</h3>
+            <p className="text-gray-700">
               Transparent pricing with zero interest on timely payments.
             </p>
           </div>
-          <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+          <div className="bg-white p-8 rounded-md shadow-md border border-gray-200 text-center">
             <div className="text-bnpl-blue text-4xl mb-4">🛒</div>
-            <h3 className="text-xl font-semibold text-bnpl-blue mb-2">
-              Shop Anywhere
-            </h3>
-            <p className="text-gray-600">
+            <h3 className="text-xl font-bold text-black mb-4">Shop Anywhere</h3>
+            <p className="text-gray-700">
               Use BNPL at thousands of partner stores online and in-person.
             </p>
           </div>
@@ -188,86 +183,74 @@ const LandingPage = () => {
       </section>
 
       {/* Merchant Benefits Section */}
-      <section className="bg-gradient-to-br from-bnpl-blue via-blue-700 to-bnpl-light-blue text-white py-12 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Boost Your Business with BNPL
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white text-bnpl-blue rounded-lg shadow-lg p-6 text-center">
-              <div className="text-4xl mb-4">📈</div>
-              <h3 className="text-xl font-semibold mb-2">Increase Sales</h3>
-              <p className="text-gray-600">
-                Offer flexible payments to attract more customers.
-              </p>
-            </div>
-            <div className="bg-white text-bnpl-blue rounded-lg shadow-lg p-6 text-center">
-              <div className="text-4xl mb-4">💰</div>
-              <h3 className="text-xl font-semibold mb-2">Get Paid Upfront</h3>
-              <p className="text-gray-600">
-                We pay you immediately while customers pay over time.
-              </p>
-            </div>
-            <div className="bg-white text-bnpl-blue rounded-lg shadow-lg p-6 text-center">
-              <div className="text-4xl mb-4">⚙️</div>
-              <h3 className="text-xl font-semibold mb-2">Easy Integration</h3>
-              <p className="text-gray-600">
-                Add BNPL to your store with a simple setup.
-              </p>
-            </div>
+      <section className="max-w-7xl mx-auto py-12 px-6">
+        <h2 className="text-3xl font-bold text-black text-center mb-10">
+          Boost Your Business with BNPL
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white p-8 rounded-md shadow-md border border-gray-200 text-center">
+            <div className="text-bnpl-blue text-4xl mb-4">📈</div>
+            <h3 className="text-xl font-bold text-black mb-4">Increase Sales</h3>
+            <p className="text-gray-700">
+              Offer flexible payments to attract more customers.
+            </p>
           </div>
-          <div className="text-center mt-8">
-            <a
-              href="/merchant-signup"
-              className="bg-bnpl-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-bnpl-blue transition"
-            >
-              Become a Merchant Partner
-            </a>
+          <div className="bg-white p-8 rounded-md shadow-md border border-gray-200 text-center">
+            <div className="text-bnpl-blue text-4xl mb-4">💰</div>
+            <h3 className="text-xl font-bold text-black mb-4">Get Paid Upfront</h3>
+            <p className="text-gray-700">
+              We pay you immediately while customers pay over time.
+            </p>
           </div>
+          <div className="bg-white p-8 rounded-md shadow-md border border-gray-200 text-center">
+            <div className="text-bnpl-blue text-4xl mb-4">⚙️</div>
+            <h3 className="text-xl font-bold text-black mb-4">Easy Integration</h3>
+            <p className="text-gray-700">
+              Add BNPL to your store with a simple setup.
+            </p>
+          </div>
+        </div>
+        <div className="text-center mt-10">
+          <Link
+            to="/merchant-signup"
+            className="bg-bnpl-blue text-white px-8 py-4 rounded-md font-medium text-lg hover:bg-blue-800 transition-all duration-200"
+          >
+            Become a Merchant Partner
+          </Link>
         </div>
       </section>
 
-      {/* Refined How It Works Section */}
-      <section className="max-w-6xl mx-auto py-12 px-6" id="how-it-works">
-        <h2 className="text-3xl font-bold text-bnpl-blue text-center mb-8">
+      {/* How It Works Section */}
+      <section className="max-w-7xl mx-auto py-12 px-6" id="how-it-works">
+        <h2 className="text-3xl font-bold text-black text-center mb-10">
           How It Works
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white rounded-lg shadow-lg p-6" id="customers">
-            <h3 className="text-xl font-semibold text-bnpl-blue mb-4">
-              For Customers
-            </h3>
-            <ol className="space-y-4 text-gray-600 list-decimal pl-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-white p-8 rounded-md shadow-md border border-gray-200">
+            <h3 className="text-xl font-bold text-black mb-4">For Customers</h3>
+            <ol className="space-y-4 text-gray-700 list-decimal pl-5">
               <li>
-                <span className="font-bold text-bnpl-blue">Sign Up:</span>{" "}
-                Create an account and get approved in minutes.
+                <span className="text-bnpl-blue font-semibold">Sign Up:</span> Create an account and get approved in minutes.
               </li>
               <li>
-                <span className="font-bold text-bnpl-blue">Shop:</span> Choose
-                BNPL at checkout from our partner stores.
+                <span className="text-bnpl-blue font-semibold">Shop:</span> Choose BNPL at checkout from our partner stores.
               </li>
               <li>
-                <span className="font-bold text-bnpl-blue">Pay Later:</span>{" "}
-                Select a plan (3, 6, or 12 months) and pay over time.
+                <span className="text-bnpl-blue font-semibold">Pay Later:</span> Select a plan (3, 6, or 12 months) and pay over time.
               </li>
             </ol>
           </div>
-          <div className="bg-white rounded-lg shadow-lg p-6" id="merchants">
-            <h3 className="text-xl font-semibold text-bnpl-blue mb-4">
-              For Merchants
-            </h3>
-            <ol className="space-y-4 text-gray-600 list-decimal pl-5">
+          <div className="bg-white p-8 rounded-md shadow-md border border-gray-200">
+            <h3 className="text-xl font-bold text-black mb-4">For Merchants</h3>
+            <ol className="space-y-4 text-gray-700 list-decimal pl-5">
               <li>
-                <span className="font-bold text-bnpl-blue">Register:</span> Join
-                our network with a quick setup.
+                <span className="text-bnpl-blue font-semibold">Register:</span> Join our network with a quick setup.
               </li>
               <li>
-                <span className="font-bold text-bnpl-blue">Offer BNPL:</span>{" "}
-                Provide customers with flexible payment options.
+                <span className="text-bnpl-blue font-semibold">Offer BNPL:</span> Provide customers with flexible payment options.
               </li>
               <li>
-                <span className="font-bold text-bnpl-blue">Get Paid:</span>{" "}
-                Receive full payment upfront while we handle installments.
+                <span className="text-bnpl-blue font-semibold">Get Paid:</span> Receive full payment upfront while we handle installments.
               </li>
             </ol>
           </div>
@@ -275,57 +258,60 @@ const LandingPage = () => {
       </section>
 
       {/* Store Categories Section */}
-      <section className="max-w-6xl mx-auto py-12 px-6">
-        <h2 className="text-3xl font-bold text-bnpl-blue text-center mb-8">
+      <section className="max-w-7xl mx-auto py-12 px-6">
+        <h2 className="text-3xl font-bold text-black text-center mb-10">
           Explore Our Store Categories
         </h2>
-        <p className="text-gray-600 text-center mb-8">
+        <p className="text-lg text-gray-700 text-center mb-8">
           Shop with BNPL across a wide range of categories at our partner stores.
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {storeCategories.map((category) => (
             <div
               key={category.name}
-              className="bg-white rounded-lg shadow-lg p-4 text-center hover:bg-bnpl-light-blue hover:text-white transition"
+              className="bg-white p-6 rounded-md shadow-md border border-gray-200 text-center"
             >
-              <div className="text-3xl mb-2">{category.icon}</div>
-              <h3 className="text-lg font-semibold">{category.name}</h3>
+              <div className="text-3xl mb-4">{category.icon}</div>
+              <p className="text-lg font-bold text-black">{category.name}</p>
+              <Link
+                to={`/shop/${category.name.toLowerCase().replace(" & ", "-")}`}
+                className="mt-4 block text-bnpl-blue hover:underline text-lg font-medium"
+              >
+                Shop Now
+              </Link>
             </div>
           ))}
         </div>
       </section>
 
       {/* Our Partners Section */}
-      <section className="max-w-6xl mx-auto py-12 px-6">
-        <h2 className="text-3xl font-bold text-bnpl-blue text-center mb-8">
+      <section className="max-w-7xl mx-auto py-12 px-6">
+        <h2 className="text-3xl font-bold text-black text-center mb-10">
           Our Partners
         </h2>
-        <p className="text-gray-600 text-center mb-8">
+        <p className="text-lg text-gray-700 text-center mb-8">
           We collaborate with leading companies to bring you the best shopping experience.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className="bg-white rounded-lg shadow-lg p-6 text-center hover:bg-bnpl-light-blue hover:text-white transition"
+              className="bg-white p-6 rounded-md shadow-md border border-gray-200 text-center"
             >
-              <h3 className="text-xl font-semibold text-bnpl-blue mb-2">
-                {partner.name}
-              </h3>
-              <p className="text-gray-600">{partner.description}</p>
+              <h3 className="text-xl font-bold text-black mb-4">{partner.name}</h3>
+              <p className="text-gray-700">{partner.description}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Enhanced Footer Section */}
+      {/* Footer Section */}
       <footer className="bg-bnpl-blue text-white py-12 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-2xl font-bold mb-4">Genesis</h3>
             <p className="text-gray-200 mb-4">
-              Empowering flexible payments for customers and growth for
-              merchants since 2025.
+              Empowering flexible payments for customers and growth for merchants since 2025.
             </p>
             <p className="text-sm">© 2025 Genesis. All rights reserved.</p>
           </div>
@@ -333,34 +319,31 @@ const LandingPage = () => {
             <h4 className="text-lg font-semibold mb-4">Explore</h4>
             <ul className="space-y-2">
               <li>
-                <a href="/how-it-works" className="hover:underline hover:text-bnpl-light-blue">
+                <Link to="/how-it-works" className="hover:text-bnpl-light-blue transition">
                   How It Works
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/customer-signup" className="hover:underline hover:text-bnpl-light-blue">
+                <Link to="/customer-signup" className="hover:text-bnpl-light-blue transition">
                   For Customers
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/merchant-signup" className="hover:underline hover:text-bnpl-light-blue">
+                <Link to="/merchant-signup" className="hover:text-bnpl-light-blue transition">
                   For Merchants
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/faq" className="hover:underline hover:text-bnpl-light-blue">
+                <Link to="/faq" className="hover:text-bnpl-light-blue transition">
                   FAQ
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Get in Touch</h4>
             <p className="text-gray-200 mb-2">
-              Email:{" "}
-              <a href="mailto:support@bnplsystem.com" className="hover:underline hover:text-bnpl-light-blue">
-                support@bnplsystem.com
-              </a>
+              Email: <Link to="mailto:support@bnplsystem.com" className="hover:text-bnpl-light-blue">support@bnplsystem.com</Link>
             </p>
             <p className="text-gray-200 mb-2">
               Phone: <span className="font-medium">+1 (800) 123-4567</span>
@@ -368,36 +351,6 @@ const LandingPage = () => {
             <p className="text-gray-200">
               Address: 123 Payment Lane, Finance City, USA
             </p>
-            <div className="flex space-x-4 mt-4">
-              <a
-                href="https://twitter.com/bnplsystem"
-                className="text-2xl hover:text-bnpl-light-blue"
-                aria-label="Follow us on Twitter"
-              >
-                
-              </a>
-              <a
-                href="https://facebook.com/bnplsystem"
-                className="text-2xl hover:text-bnpl-light-blue"
-                aria-label="Follow us on Facebook"
-              >
-                
-              </a>
-              <a
-                href="https://instagram.com/bnplsystem"
-                className="text-2xl hover:text-bnpl-light-blue"
-                aria-label="Follow us on Instagram"
-              >
-                
-              </a>
-              <a
-                href="https://linkedin.com/company/bnplsystem"
-                className="text-2xl hover:text-bnpl-light-blue"
-                aria-label="Follow us on LinkedIn"
-              >
-                
-              </a>
-            </div>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Stay Updated</h4>
@@ -408,11 +361,11 @@ const LandingPage = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="px-4 py-2 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-bnpl-light-blue"
+                className="px-4 py-2 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
               />
               <button
                 type="submit"
-                className="bg-bnpl-light-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-white hover:text-bnpl-blue transition"
+                className="bg-bnpl-blue text-white px-4 py-2 rounded-md font-medium hover:bg-blue-800 transition-all duration-200"
               >
                 Subscribe
               </button>

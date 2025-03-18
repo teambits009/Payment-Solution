@@ -15,10 +15,10 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/customer-signup" element={<CustomerSignup />} />
         <Route path="/merchant-signup" element={<MerchantSignup />} />
-        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} /> {/* If created */}
         <Route path="/login" element={<Login />} />
         <Route path="/customer-dashboard" element={<CustomerDashboard />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} /> {/* If created */}
       </Routes>
     </Router>
   );
