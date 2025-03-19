@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-// Reusable Navbar Component (Adapted for Dashboard)
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Add logout logic here (e.g., clear auth token)
     navigate("/login");
   };
 
@@ -72,14 +70,13 @@ const Navbar = () => {
 };
 
 const ApplyForBNPL = () => {
-  // Mock customer data (replace with real data from auth/API)
   const customerName = "Brandon Opere";
   const availableCredit = 1500.00;
   const creditHistory = {
     totalTransactions: 3,
     completedPayments: 3,
     overduePayments: 1,
-    creditScore: "Good", // Mocked, could be calculated
+    creditScore: "Good",
   };
 
   const [formData, setFormData] = useState({
@@ -107,8 +104,7 @@ const ApplyForBNPL = () => {
       return;
     }
     console.log("BNPL Application Data:", { ...formData, creditHistory });
-    // Add API call here to submit application
-    navigate("/customer-dashboard"); // Redirect on success
+    navigate("/customer-dashboard");
   };
 
   return (
@@ -118,17 +114,38 @@ const ApplyForBNPL = () => {
         <div className="bg-white p-8 rounded-md shadow-md border border-gray-200 w-full max-w-lg">
           <h1 className="text-3xl font-bold text-black mb-6 text-center">Apply for BNPL</h1>
 
-          {/* Credit Summary */}
-          <div className="bg-bnpl-blue text-white p-4 rounded-md mb-6 text-center">
-            <p className="text-lg font-semibold">Available Credit: ${availableCredit.toFixed(2)}</p>
-            <p className="text-sm">
-              Credit Status: <span className="font-medium">{creditHistory.creditScore}</span> (
-              {creditHistory.completedPayments} completed, {creditHistory.overduePayments} overdue)
-            </p>
+          {/* Professional Available Credit Section */}
+          <div className="bg-white border border-gray-200 rounded-md shadow-sm mb-6">
+            <div className="bg-bnpl-blue text-white p-6 rounded-t-md">
+              <h2 className="text-xl font-semibold text-center">Credit Overview</h2>
+            </div>
+            <div className="p-4 space-y-4"> 
+              <div className="flex justify-between items-center bg-bnpl-blue-light p-4 rounded-md">
+                <span className="text-gray-700 font-medium">Available Credit:</span>
+                <span className="text-2xl font-bold text-bnpl-blue">${availableCredit.toFixed(2)}</span>
+              </div>
+              <div className="grid grid-cols-2 gap-4 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Credit Score:</span>
+                  <span className="font-medium text-gray-800">{creditHistory.creditScore}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Total Transactions:</span>
+                  <span className="font-medium text-gray-800">{creditHistory.totalTransactions}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Completed Payments:</span>
+                  <span className="font-medium text-green-600">{creditHistory.completedPayments}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Overdue Payments:</span>
+                  <span className="font-medium text-red-600">{creditHistory.overduePayments}</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Personal Information */}
             <div>
               <label htmlFor="fullName" className="block text-gray-700 font-medium mb-2">
                 Full Name
@@ -141,7 +158,7 @@ const ApplyForBNPL = () => {
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
                 required
-                disabled // Pre-filled from auth
+                disabled
               />
             </div>
             <div>
@@ -159,8 +176,6 @@ const ApplyForBNPL = () => {
                 placeholder="+1 (123) 456-7890"
               />
             </div>
-
-            {/* Purchase Details */}
             <div>
               <label htmlFor="merchantName" className="block text-gray-700 font-medium mb-2">
                 Merchant Name
@@ -175,7 +190,6 @@ const ApplyForBNPL = () => {
                 required
                 placeholder="e.g., TechStore"
               />
-              {/* Could be a dropdown with partnered merchants */}
             </div>
             <div>
               <label htmlFor="purchaseAmount" className="block text-gray-700 font-medium mb-2">
@@ -210,8 +224,6 @@ const ApplyForBNPL = () => {
                 placeholder="e.g., Laptop Model XYZ"
               />
             </div>
-
-            {/* Repayment Preferences */}
             <div>
               <label htmlFor="planDuration" className="block text-gray-700 font-medium mb-2">
                 Plan Duration
@@ -244,13 +256,8 @@ const ApplyForBNPL = () => {
                 <option value="Card">Credit/Debit Card</option>
                 <option value="Bank">Bank Transfer</option>
                 <option value="Wallet">Digital Wallet</option>
-                <option value="Card">Mpesa</option>
-                <option value="Bank">Google Pay</option>
-                <option value="Wallet">Stripe</option>
               </select>
             </div>
-
-            {/* Additional Details */}
             <div>
               <label htmlFor="monthlyIncome" className="block text-gray-700 font-medium mb-2">
                 Monthly Income ($)
@@ -282,8 +289,6 @@ const ApplyForBNPL = () => {
                 placeholder="e.g., Need a new laptop for work"
               />
             </div>
-
-            {/* Submit and Cancel Buttons */}
             <div className="flex justify-between space-x-4">
               <button
                 type="submit"

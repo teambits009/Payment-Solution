@@ -8,6 +8,7 @@ import PrivacyPolicy from "./components/PrivacyPolicy"; // Add this if created
 import Login from "./components/Login";
 import ApplyBNPL from "./components/ApplyBNPL";
 import CustomerDashboard from "./components/CustomerDashboard";
+import Stores from "./components/Stores"; // Add this
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/apply-bnpl" element={<ApplyBNPL />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} /> {/* If created */}
+       <Route path="/stores/*" element={<Stores />} /> {/* Add this */}
       </Routes>
     </Router>
   );

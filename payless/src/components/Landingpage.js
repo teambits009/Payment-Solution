@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Added useNavigate
 
 const LandingPage = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isHowItWorksDropdownOpen, setIsHowItWorksDropdownOpen] = useState(false);
+  const navigate = useNavigate(); // For programmatic navigation
 
   // Store categories data
   const storeCategories = [
@@ -30,6 +31,11 @@ const LandingPage = () => {
     { name: "RetailRise", description: "Boosting retail success" },
     { name: "PayLess", description: "Improving financial growth" },
   ];
+
+  // Handle Shop Now click to pass category to CustomerDashboard
+  const handleShopNow = (category) => {
+    navigate(`/customer-dashboard?category=${category.toLowerCase().replace(" & ", "-")}`);
+  };
 
   return (
     <div className="min-h-screen bg-gray-100 font-sans">
@@ -273,12 +279,12 @@ const LandingPage = () => {
             >
               <div className="text-3xl mb-4">{category.icon}</div>
               <p className="text-lg font-bold text-black">{category.name}</p>
-              <Link
-                to={`/shop/${category.name.toLowerCase().replace(" & ", "-")}`}
+              <button
+                onClick={() => handleShopNow(category.name)}
                 className="mt-4 block text-bnpl-blue hover:underline text-lg font-medium"
               >
                 Shop Now
-              </Link>
+              </button>
             </div>
           ))}
         </div>
