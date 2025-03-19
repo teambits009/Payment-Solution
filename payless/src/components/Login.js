@@ -119,12 +119,6 @@ const LinksSection = ({ forgotPath = "/forgot-password", signupPath, signupText,
         {signupText}
       </Link>
     </p>
-    <p>
-      Switch to{" "}
-      <Link to={alternatePath} className="text-bnpl-blue hover:underline font-medium">
-        {alternateText} Login
-      </Link>
-    </p>
   </div>
 );
 

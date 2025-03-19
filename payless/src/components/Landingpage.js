@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isHowItWorksDropdownOpen, setIsHowItWorksDropdownOpen] = useState(false);
   const navigate = useNavigate();
 
   // Store categories data
@@ -39,7 +38,7 @@ const LandingPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 font-sans">
-      {/* Navbar Section (PayPal-inspired) */}
+      {/* Navbar Section (PayPal-inspired, updated to link to HowItWorks.js) */}
       <nav className="bg-bnpl-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="text-2xl font-bold">
@@ -48,32 +47,9 @@ const LandingPage = () => {
             </Link>
           </div>
           <div className="hidden md:flex space-x-6 items-center">
-            <div
-              className="relative"
-              onMouseEnter={() => setIsHowItWorksDropdownOpen(true)}
-              onMouseLeave={() => setIsHowItWorksDropdownOpen(false)}
-            >
-              <button className="text-lg hover:text-bnpl-light-blue transition flex items-center">
-                How It Works
-                <span className="ml-1">▼</span>
-              </button>
-              {isHowItWorksDropdownOpen && (
-                <div className="absolute bg-white text-bnpl-blue rounded-md shadow-md mt-2 py-2 w-40">
-                  <Link
-                    to="/how-it-works#customers"
-                    className="block px-4 py-2 text-lg hover:bg-bnpl-light-blue hover:text-white transition"
-                  >
-                    For Customers
-                  </Link>
-                  <Link
-                    to="/how-it-works#merchants"
-                    className="block px-4 py-2 text-lg hover:bg-bnpl-light-blue hover:text-white transition"
-                  >
-                    For Merchants
-                  </Link>
-                </div>
-              )}
-            </div>
+            <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
+              How It Works
+            </Link>
             <Link to="/customers" className="text-lg hover:text-bnpl-light-blue transition">
               For Customers
             </Link>
@@ -119,7 +95,7 @@ const LandingPage = () => {
                 to="/customer-signup"
                 className="bg-white text-bnpl-blue px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:text-white transition"
               >
-              Sign Up
+                Sign Up
               </Link>
               <Link
                 to="/login"
@@ -132,7 +108,7 @@ const LandingPage = () => {
         )}
       </nav>
 
-      {/* Hero Section (Styled like Navbar, Extended by 1/2) */}
+      {/* Hero Section */}
       <header className="bg-bnpl-blue text-white py-24 px-6 shadow-md">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -142,18 +118,22 @@ const LandingPage = () => {
             Build your Credit Score with every purchase and unlock flexible payments.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link
-              to="/customer-signup"
-              className="bg-white text-bnpl-blue px-8 py-4 rounded-md font-medium text-lg hover:bg-bnpl-light-blue hover:text-white transition-all duration-200"
-            >
-              Get Started as a Customer
-            </Link>
-            <Link
-              to="/merchant-signup"
-              className="border border-white px-8 py-4 rounded-md font-medium text-lg hover:bg-bnpl-light-blue hover:border-bnpl-light-blue transition-all duration-200"
-            >
-              Join as a Merchant
-            </Link>
+            <div className="flex flex-col items-center">
+              <Link
+                to="/customer-signup"
+                className="bg-white text-bnpl-blue px-8 py-4 rounded-md font-medium text-lg hover:bg-bnpl-light-blue hover:text-white transition-all duration-200"
+              >
+                Get Started as a Customer
+              </Link>
+            </div>
+            <div className="flex flex-col items-center">
+              <Link
+                to="/merchant-signup"
+                className="border border-white px-8 py-4 rounded-md font-medium text-lg hover:bg-bnpl-light-blue hover:border-bnpl-light-blue transition-all duration-200"
+              >
+                Join as a Merchant
+              </Link>
+            </div>
           </div>
         </div>
       </header>
@@ -217,12 +197,14 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="text-center mt-10">
-          <Link
-            to="/merchant-signup"
-            className="bg-bnpl-blue text-white px-8 py-4 rounded-md font-medium text-lg hover:bg-blue-800 transition-all duration-200"
-          >
-            Become a Merchant Partner
-          </Link>
+          <div className="flex flex-col items-center">
+            <Link
+              to="/merchant-signup"
+              className="bg-bnpl-blue text-white px-8 py-4 rounded-md font-medium text-lg hover:bg-blue-800 transition-all duration-200"
+            >
+              Become a Merchant Partner
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -231,9 +213,6 @@ const LandingPage = () => {
         <h2 className="text-3xl font-bold text-black text-center mb-10">
           How It Works
         </h2>
-        <p className="text-lg text-gray-700 text-center mb-8">
-          Your Credit Score—based on purchases and spending—unlocks BNPL benefits for customers and merchants.
-        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white p-8 rounded-md shadow-md border border-gray-200">
             <h3 className="text-xl font-bold text-black mb-4">For Customers</h3>
@@ -310,9 +289,6 @@ const LandingPage = () => {
         <h2 className="text-3xl font-bold text-black text-center mb-10">
           Our Partners
         </h2>
-        <p className="text-lg text-gray-700 text-center mb-8">
-          We collaborate with leading companies to bring you the best shopping experience.
-        </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {partners.map((partner) => (
             <div
@@ -326,6 +302,38 @@ const LandingPage = () => {
         </div>
       </section>
 
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div id="terms-customers" className="bg-white p-8 rounded-md shadow-md border border-gray-200">
+            <h3 className="text-xl font-bold text-black mb-4">For Customers</h3>
+            <ul className="space-y-4 text-gray-700 list-disc pl-5">
+              <li>
+                <span className="text-bnpl-blue font-semibold">Eligibility:</span> Must be 18+ and registered with Genesis. Credit Score based on purchase history determines BNPL limits.
+              </li>
+              <li>
+                <span className="text-bnpl-blue font-semibold">Payments:</span> Choose 3, 6, or 12-month plans. Late payments may reduce your Credit Score and incur fees.
+              </li>
+              <li>
+                <span className="text-bnpl-blue font-semibold">Usage:</span> BNPL is available only at partner stores. No refunds for early repayments.
+              </li>
+            </ul>
+          </div>
+          <div id="terms-merchants" className="bg-white p-8 rounded-md shadow-md border border-gray-200">
+            <h3 className="text-xl font-bold text-black mb-4">For Merchants</h3>
+            <ul className="space-y-4 text-gray-700 list-disc pl-5">
+              <li>
+                <span className="text-bnpl-blue font-semibold">Partnership:</span> Must integrate Genesis BNPL via our API. Full payment issued upon sale.
+              </li>
+              <li>
+                <span className="text-bnpl-blue font-semibold">Fees:</span> A small transaction fee applies per BNPL sale. No chargebacks for non-payment by customers.
+              </li>
+              <li>
+                <span className="text-bnpl-blue font-semibold">Compliance:</span> Adhere to Genesis policies and local regulations for BNPL offerings.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="text-center mt-10">
+        </div>
       {/* Footer Section */}
       <footer className="bg-bnpl-blue text-white py-12 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
