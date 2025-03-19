@@ -9,6 +9,7 @@ import Login from "./components/Login";
 import ApplyBNPL from "./components/ApplyBNPL";
 import CustomerDashboard from "./components/CustomerDashboard";
 import Stores from "./components/Stores"; // Add this
+import HowItWorks from "./components/HowItWorks";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} /> {/* If created */}
        <Route path="/stores/*" element={<Stores />} /> {/* Add this */}
+       <Route path="/how-it-works" element={<HowItWorks />} />
       </Routes>
     </Router>
   );

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom"; // Added useNavigate
+import { Link, useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isHowItWorksDropdownOpen, setIsHowItWorksDropdownOpen] = useState(false);
-  const navigate = useNavigate(); // For programmatic navigation
+  const navigate = useNavigate();
 
   // Store categories data
   const storeCategories = [
@@ -119,7 +119,7 @@ const LandingPage = () => {
                 to="/customer-signup"
                 className="bg-white text-bnpl-blue px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:text-white transition"
               >
-                Sign Up
+              Sign Up
               </Link>
               <Link
                 to="/login"
@@ -132,25 +132,25 @@ const LandingPage = () => {
         )}
       </nav>
 
-      {/* Hero Section (PayPal-inspired) */}
-      <header className="bg-white py-16 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-black mb-6">
+      {/* Hero Section (Styled like Navbar, Extended by 1/2) */}
+      <header className="bg-bnpl-blue text-white py-24 px-6 shadow-md">
+        <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Shop Now, Pay Later with Ease
           </h1>
-          <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-            Flexible payments for customers. More sales for merchants.
+          <p className="text-lg md:text-xl mb-8 max-w-2xl">
+            Build your Credit Score with every purchase and unlock flexible payments.
           </p>
-          <div className="flex justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               to="/customer-signup"
-              className="bg-bnpl-blue text-white px-8 py-4 rounded-md font-medium text-lg hover:bg-blue-800 transition-all duration-200"
+              className="bg-white text-bnpl-blue px-8 py-4 rounded-md font-medium text-lg hover:bg-bnpl-light-blue hover:text-white transition-all duration-200"
             >
               Get Started as a Customer
             </Link>
             <Link
               to="/merchant-signup"
-              className="border border-bnpl-blue text-bnpl-blue px-8 py-4 rounded-md font-medium text-lg hover:bg-bnpl-blue hover:text-white transition-all duration-200"
+              className="border border-white px-8 py-4 rounded-md font-medium text-lg hover:bg-bnpl-light-blue hover:border-bnpl-light-blue transition-all duration-200"
             >
               Join as a Merchant
             </Link>
@@ -179,10 +179,10 @@ const LandingPage = () => {
             </p>
           </div>
           <div className="bg-white p-8 rounded-md shadow-md border border-gray-200 text-center">
-            <div className="text-bnpl-blue text-4xl mb-4">🛒</div>
-            <h3 className="text-xl font-bold text-black mb-4">Shop Anywhere</h3>
+            <div className="text-bnpl-blue text-4xl mb-4">📊</div>
+            <h3 className="text-xl font-bold text-black mb-4">Credit Score Growth</h3>
             <p className="text-gray-700">
-              Use BNPL at thousands of partner stores online and in-person.
+              Boost your score with every purchase and payment.
             </p>
           </div>
         </div>
@@ -198,21 +198,21 @@ const LandingPage = () => {
             <div className="text-bnpl-blue text-4xl mb-4">📈</div>
             <h3 className="text-xl font-bold text-black mb-4">Increase Sales</h3>
             <p className="text-gray-700">
-              Offer flexible payments to attract more customers.
+              Customers with higher Credit Scores buy more.
             </p>
           </div>
           <div className="bg-white p-8 rounded-md shadow-md border border-gray-200 text-center">
             <div className="text-bnpl-blue text-4xl mb-4">💰</div>
             <h3 className="text-xl font-bold text-black mb-4">Get Paid Upfront</h3>
             <p className="text-gray-700">
-              We pay you immediately while customers pay over time.
+              Receive full payment while we manage installments.
             </p>
           </div>
           <div className="bg-white p-8 rounded-md shadow-md border border-gray-200 text-center">
             <div className="text-bnpl-blue text-4xl mb-4">⚙️</div>
             <h3 className="text-xl font-bold text-black mb-4">Easy Integration</h3>
             <p className="text-gray-700">
-              Add BNPL to your store with a simple setup.
+              Add BNPL to your store effortlessly.
             </p>
           </div>
         </div>
@@ -231,34 +231,49 @@ const LandingPage = () => {
         <h2 className="text-3xl font-bold text-black text-center mb-10">
           How It Works
         </h2>
+        <p className="text-lg text-gray-700 text-center mb-8">
+          Your Credit Score—based on purchases and spending—unlocks BNPL benefits for customers and merchants.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white p-8 rounded-md shadow-md border border-gray-200">
             <h3 className="text-xl font-bold text-black mb-4">For Customers</h3>
             <ol className="space-y-4 text-gray-700 list-decimal pl-5">
               <li>
-                <span className="text-bnpl-blue font-semibold">Sign Up:</span> Create an account and get approved in minutes.
+                <span className="text-bnpl-blue font-semibold">Sign Up & Build Credit Score:</span> Join Genesis and start with a base Credit Score. Buy 5+ items or spend $200 to grow it.
               </li>
               <li>
-                <span className="text-bnpl-blue font-semibold">Shop:</span> Choose BNPL at checkout from our partner stores.
+                <span className="text-bnpl-blue font-semibold">Shop with Your Score:</span> Use BNPL at checkout—your score determines eligibility (e.g., $699 item needs $500 spent).
               </li>
               <li>
-                <span className="text-bnpl-blue font-semibold">Pay Later:</span> Select a plan (3, 6, or 12 months) and pay over time.
+                <span className="text-bnpl-blue font-semibold">Pay Later & Boost Score:</span> Choose 3, 6, or 12 months. On-time payments raise your score (e.g., +$200 after 3 payments).
               </li>
             </ol>
+            <Link
+              to="/how-it-works#customers"
+              className="mt-4 inline-block text-bnpl-blue hover:underline font-medium"
+            >
+              Learn More
+            </Link>
           </div>
           <div className="bg-white p-8 rounded-md shadow-md border border-gray-200">
             <h3 className="text-xl font-bold text-black mb-4">For Merchants</h3>
             <ol className="space-y-4 text-gray-700 list-decimal pl-5">
               <li>
-                <span className="text-bnpl-blue font-semibold">Register:</span> Join our network with a quick setup.
+                <span className="text-bnpl-blue font-semibold">Register:</span> Join our network—customer eligibility is based on their Credit Score from purchases.
               </li>
               <li>
-                <span className="text-bnpl-blue font-semibold">Offer BNPL:</span> Provide customers with flexible payment options.
+                <span className="text-bnpl-blue font-semibold">Offer BNPL:</span> Let customers shop with their score—higher scores mean bigger sales.
               </li>
               <li>
-                <span className="text-bnpl-blue font-semibold">Get Paid:</span> Receive full payment upfront while we handle installments.
+                <span className="text-bnpl-blue font-semibold">Get Paid:</span> Receive full payment upfront while we handle repayments tied to their score.
               </li>
             </ol>
+            <Link
+              to="/how-it-works#merchants"
+              className="mt-4 inline-block text-bnpl-blue hover:underline font-medium"
+            >
+              Learn More
+            </Link>
           </div>
         </div>
       </section>
@@ -275,13 +290,13 @@ const LandingPage = () => {
           {storeCategories.map((category) => (
             <div
               key={category.name}
-              className="bg-white p-6 rounded-md shadow-md border border-gray-200 text-center"
+              className="bg-white p-6 rounded-md shadow-md border border-gray-200 flex flex-col items-center text-center"
             >
               <div className="text-3xl mb-4">{category.icon}</div>
-              <p className="text-lg font-bold text-black">{category.name}</p>
+              <p className="text-lg font-bold text-black mb-4">{category.name}</p>
               <button
                 onClick={() => handleShopNow(category.name)}
-                className="mt-4 block text-bnpl-blue hover:underline text-lg font-medium"
+                className="text-bnpl-blue hover:underline text-lg font-medium"
               >
                 Shop Now
               </button>
