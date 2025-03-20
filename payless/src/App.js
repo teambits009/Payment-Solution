@@ -10,6 +10,11 @@ import ApplyBNPL from "./components/ApplyBNPL";
 import CustomerDashboard from "./components/CustomerDashboard";
 import Stores from "./components/Stores"; // Add this
 import HowItWorks from "./components/HowItWorks";
+import MerchantDashboard from "./components/MerchantDashboard";
+import { CustomerPaymentHistory } from "./components/ViewHistory";
+import ViewHistory from "./components/ViewHistory"; // Add this
+
+
 
 function App() {
   return (
@@ -25,6 +30,9 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} /> {/* If created */}
        <Route path="/stores/*" element={<Stores />} /> {/* Add this */}
        <Route path="/how-it-works" element={<HowItWorks />} />
+       <Route path="/merchant-dashboard" element={<MerchantDashboard />} />
+       <Route path="/customer-payment-history" element={<CustomerPaymentHistory />} />
+       <Route path="/view-history" element={<ViewHistory />} /> {/* Add this */}
       </Routes>
     </Router>
   );

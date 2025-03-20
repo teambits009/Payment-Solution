@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom"; // Added useLocation
 
 const MerchantDashboard = () => {
   const navigate = useNavigate();
 
-  // Mock data with BNPL purchase details and credit scores
+  // Mock data with BNPL purchase details, credit scores, and payment history
   const [dashboardData] = useState({
     totalSales: 7500,
     pendingSettlements: 850,
@@ -21,6 +21,14 @@ const MerchantDashboard = () => {
         paymentStatus: "Paid",
         refundEligible: false,
         creditScore: 780,
+        paymentHistory: [
+          { installment: 1, date: "Mar 18, 2025", amount: 41.67, status: "Paid" },
+          { installment: 2, date: "Apr 18, 2025", amount: 41.67, status: "Paid" },
+          { installment: 3, date: "May 18, 2025", amount: 41.67, status: "Paid" },
+          { installment: 4, date: "Jun 18, 2025", amount: 41.67, status: "Paid" },
+          { installment: 5, date: "Jul 18, 2025", amount: 41.67, status: "Paid" },
+          { installment: 6, date: "Aug 18, 2025", amount: 41.65, status: "Paid" },
+        ],
       },
       {
         id: 2,
@@ -33,6 +41,11 @@ const MerchantDashboard = () => {
         paymentStatus: "Pending",
         refundEligible: true,
         creditScore: 620,
+        paymentHistory: [
+          { installment: 1, date: "Mar 17, 2025", amount: 50.00, status: "Paid" },
+          { installment: 2, date: "Apr 17, 2025", amount: 50.00, status: "Pending" },
+          { installment: 3, date: "May 17, 2025", amount: 50.00, status: "Pending" },
+        ],
       },
       {
         id: 3,
@@ -45,6 +58,20 @@ const MerchantDashboard = () => {
         paymentStatus: "Paid",
         refundEligible: false,
         creditScore: 810,
+        paymentHistory: [
+          { installment: 1, date: "Mar 16, 2025", amount: 41.67, status: "Paid" },
+          { installment: 2, date: "Apr 16, 2025", amount: 41.67, status: "Paid" },
+          { installment: 3, date: "May 16, 2025", amount: 41.67, status: "Paid" },
+          { installment: 4, date: "Jun 16, 2025", amount: 41.67, status: "Paid" },
+          { installment: 5, date: "Jul 16, 2025", amount: 41.67, status: "Paid" },
+          { installment: 6, date: "Aug 16, 2025", amount: 41.67, status: "Paid" },
+          { installment: 7, date: "Sep 16, 2025", amount: 41.67, status: "Paid" },
+          { installment: 8, date: "Oct 16, 2025", amount: 41.67, status: "Paid" },
+          { installment: 9, date: "Nov 16, 2025", amount: 41.67, status: "Paid" },
+          { installment: 10, date: "Dec 16, 2025", amount: 41.67, status: "Paid" },
+          { installment: 11, date: "Jan 16, 2026", amount: 41.67, status: "Paid" },
+          { installment: 12, date: "Feb 16, 2026", amount: 41.61, status: "Paid" },
+        ],
       },
       {
         id: 4,
@@ -57,6 +84,14 @@ const MerchantDashboard = () => {
         paymentStatus: "Pending",
         refundEligible: true,
         creditScore: 670,
+        paymentHistory: [
+          { installment: 1, date: "Mar 15, 2025", amount: 50.00, status: "Paid" },
+          { installment: 2, date: "Apr 15, 2025", amount: 50.00, status: "Pending" },
+          { installment: 3, date: "May 15, 2025", amount: 50.00, status: "Pending" },
+          { installment: 4, date: "Jun 15, 2025", amount: 50.00, status: "Pending" },
+          { installment: 5, date: "Jul 15, 2025", amount: 50.00, status: "Pending" },
+          { installment: 6, date: "Aug 15, 2025", amount: 50.00, status: "Pending" },
+        ],
       },
       {
         id: 5,
@@ -69,6 +104,11 @@ const MerchantDashboard = () => {
         paymentStatus: "Paid",
         refundEligible: false,
         creditScore: 720,
+        paymentHistory: [
+          { installment: 1, date: "Mar 14, 2025", amount: 66.67, status: "Paid" },
+          { installment: 2, date: "Apr 14, 2025", amount: 66.67, status: "Paid" },
+          { installment: 3, date: "May 14, 2025", amount: 66.66, status: "Paid" },
+        ],
       },
     ],
     bankDetails: { name: "Chase Bank", lastFour: "1234" },
@@ -82,17 +122,15 @@ const MerchantDashboard = () => {
     alert(`Requesting withdrawal of $${dashboardData.pendingSettlements} to ${dashboardData.bankDetails.name} ending in ${dashboardData.bankDetails.lastFour}`);
   };
 
-  // Mock refund handler
   const handleRefund = (orderId) => {
     alert(`Initiating refund for Order ID: ${orderId}. This is a mock action; implement API call here.`);
   };
 
-  // Mock payment history handler
   const handleViewPaymentHistory = (orderId) => {
-    alert(`Viewing full payment history for Order ID: ${orderId}. This is a mock action; implement detailed view here.`);
+    const transaction = dashboardData.transactions.find(txn => txn.orderId === orderId);
+    navigate(`/payment-history/${orderId}`, { state: { transaction } });
   };
 
-  // Function to determine credit worthiness based on credit score
   const getCreditWorthiness = (score) => {
     if (score >= 750) return "Excellent";
     if (score >= 700) return "Good";
@@ -148,36 +186,30 @@ const MerchantDashboard = () => {
         </div>
       </section>
 
-      {/* BNPL Transactions Table Section with Credit Worthiness */}
+      {/* BNPL Transactions Table Section */}
       <section className="max-w-7xl mx-auto py-8 px-6 bg-white">
         <h2 className="text-2xl font-bold text-black mb-4">BNPL Purchase Tracking</h2>
         <div className="overflow-x-auto">
           <table className="w-full border border-gray-200 rounded-md shadow-md">
             <thead className="bg-gray-50">
               <tr>
-                {/* Top Section: Customer Details */}
                 <th className="text-gray-700 font-semibold p-4 text-left">Customer Name</th>
                 <th className="text-gray-700 font-semibold p-4 text-left">Contact</th>
-                {/* Middle Section: BNPL Plan Info */}
                 <th className="text-gray-700 font-semibold p-4 text-left">Order ID</th>
                 <th className="text-gray-700 font-semibold p-4 text-left">Date & Time</th>
                 <th className="text-gray-700 font-semibold p-4 text-left">Amount</th>
                 <th className="text-gray-700 font-semibold p-4 text-left">Payment Plan</th>
                 <th className="text-gray-700 font-semibold p-4 text-left">Payment Status</th>
-                {/* Credit Worthiness Section */}
                 <th className="text-gray-700 font-semibold p-4 text-left">Credit Score</th>
                 <th className="text-gray-700 font-semibold p-4 text-left">Credit Worthiness</th>
-                {/* Bottom Section: Actions */}
                 <th className="text-gray-700 font-semibold p-4 text-left">Actions</th>
               </tr>
             </thead>
             <tbody>
               {dashboardData.transactions.map((txn, index) => (
                 <tr key={txn.id} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
-                  {/* Customer Details */}
                   <td className="p-4 text-gray-700">{txn.customer}</td>
                   <td className="p-4 text-gray-700">{txn.contact}</td>
-                  {/* BNPL Plan Info */}
                   <td className="p-4 text-gray-700">{txn.orderId}</td>
                   <td className="p-4 text-gray-700">{txn.dateTime}</td>
                   <td className="p-4 text-gray-700">${txn.amount.toFixed(2)}</td>
@@ -185,7 +217,6 @@ const MerchantDashboard = () => {
                   <td className={`p-4 ${txn.paymentStatus === "Paid" ? "text-green-600" : "text-orange-600"}`}>
                     {txn.paymentStatus}
                   </td>
-                  {/* Credit Worthiness */}
                   <td className="p-4 text-gray-700">{txn.creditScore}</td>
                   <td className={`p-4 ${
                     getCreditWorthiness(txn.creditScore) === "Excellent" ? "text-green-600" :
@@ -196,7 +227,6 @@ const MerchantDashboard = () => {
                   }`}>
                     {getCreditWorthiness(txn.creditScore)}
                   </td>
-                  {/* Actions */}
                   <td className="p-4">
                     <div className="flex space-x-2">
                       <button
@@ -273,3 +303,118 @@ const MerchantDashboard = () => {
 };
 
 export default MerchantDashboard;
+
+// Customer Payment History Component
+export const CustomerPaymentHistory = () => {
+  const navigate = useNavigate();
+  const { state } = useLocation(); // Now properly imported
+  const { transaction } = state || {};
+
+  if (!transaction) {
+    return (
+      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+        <p className="text-lg text-gray-700">No transaction data available.</p>
+      </div>
+    );
+  }
+
+  const getCreditWorthiness = (score) => {
+    if (score >= 750) return "Excellent";
+    if (score >= 700) return "Good";
+    if (score >= 650) return "Fair";
+    if (score >= 600) return "Poor";
+    return "Bad";
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-100 font-sans">
+      {/* Navbar */}
+      <nav className="bg-bnpl-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
+          <div className="text-2xl font-bold">
+            <Link to="/" className="hover:text-bnpl-light-blue transition">
+              Genesis
+            </Link>
+          </div>
+          <button
+            onClick={() => navigate("/merchant-dashboard")}
+            className="text-lg hover:text-bnpl-light-blue transition"
+          >
+            Back to Dashboard
+          </button>
+        </div>
+      </nav>
+
+      {/* Customer Payment History Section */}
+      <section className="max-w-7xl mx-auto py-8 px-6 bg-white">
+        <h1 className="text-3xl font-bold text-black mb-6">
+          Payment History for {transaction.customer}
+        </h1>
+
+        {/* Customer Details */}
+        <div className="bg-white p-6 rounded-md shadow-md border border-gray-200 mb-6">
+          <h2 className="text-xl font-semibold text-gray-700 mb-4">Customer Details</h2>
+          <p className="text-gray-700"><strong>Name:</strong> {transaction.customer}</p>
+          <p className="text-gray-700"><strong>Contact:</strong> {transaction.contact}</p>
+          <p className="text-gray-700"><strong>Credit Score:</strong> {transaction.creditScore}</p>
+          <p className={`text-gray-700`}>
+            <strong>Credit Worthiness:</strong>{" "}
+            <span className={
+              getCreditWorthiness(transaction.creditScore) === "Excellent" ? "text-green-600" :
+              getCreditWorthiness(transaction.creditScore) === "Good" ? "text-blue-600" :
+              getCreditWorthiness(transaction.creditScore) === "Fair" ? "text-yellow-600" :
+              getCreditWorthiness(transaction.creditScore) === "Poor" ? "text-orange-600" :
+              "text-red-600"
+            }>
+              {getCreditWorthiness(transaction.creditScore)}
+            </span>
+          </p>
+        </div>
+
+        {/* BNPL Plan Info */}
+        <div className="bg-white p-6 rounded-md shadow-md border border-gray-200 mb-6">
+          <h2 className="text-xl font-semibold text-gray-700 mb-4">BNPL Plan Information</h2>
+          <p className="text-gray-700"><strong>Order ID:</strong> {transaction.orderId}</p>
+          <p className="text-gray-700"><strong>Purchase Date & Time:</strong> {transaction.dateTime}</p>
+          <p className="text-gray-700"><strong>Total Amount:</strong> ${transaction.amount.toFixed(2)}</p>
+          <p className="text-gray-700"><strong>Payment Plan:</strong> {transaction.paymentPlan}</p>
+          <p className={`text-gray-700`}>
+            <strong>Payment Status:</strong>{" "}
+            <span className={transaction.paymentStatus === "Paid" ? "text-green-600" : "text-orange-600"}>
+              {transaction.paymentStatus}
+            </span>
+          </p>
+        </div>
+
+        {/* Payment History Table */}
+        <div className="bg-white p-6 rounded-md shadow-md border border-gray-200">
+          <h2 className="text-xl font-semibold text-gray-700 mb-4">Payment History</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full border border-gray-200 rounded-md">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="text-gray-700 font-semibold p-4 text-left">Installment #</th>
+                  <th className="text-gray-700 font-semibold p-4 text-left">Due Date</th>
+                  <th className="text-gray-700 font-semibold p-4 text-left">Amount</th>
+                  <th className="text-gray-700 font-semibold p-4 text-left">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {transaction.paymentHistory.map((payment, index) => (
+                  <tr key={index} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                    <td className="p-4 text-gray-700">{payment.installment}</td>
+                    <td className="p-4 text-gray-700">{payment.date}</td>
+                    <td className="p-4 text-gray-700">${payment.amount.toFixed(2)}</td>
+                    <td className={`p-4 ${payment.status === "Paid" ? "text-green-600" : "text-orange-600"}`}>
+                      {payment.status}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
