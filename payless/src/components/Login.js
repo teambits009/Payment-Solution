@@ -17,10 +17,10 @@ const Navbar = ({ signupPath, signupText }) => {
           <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
             How It Works
           </Link>
-          <Link to="/customers" className="text-lg hover:text-bnpl-light-blue transition">
+          <Link to="/login" className="text-lg hover:text-bnpl-light-blue transition">
             For Customers
           </Link>
-          <Link to="/merchants" className="text-lg hover:text-bnpl-light-blue transition">
+          <Link to="/login" className="text-lg hover:text-bnpl-light-blue transition">
             For Merchants
           </Link>
           <Link
@@ -46,10 +46,10 @@ const Navbar = ({ signupPath, signupText }) => {
             <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
               How It Works
             </Link>
-            <Link to="/customers" className="text-lg hover:text-bnpl-light-blue transition">
+            <Link to="/login" className="text-lg hover:text-bnpl-light-blue transition">
               For Customers
             </Link>
-            <Link to="/merchants" className="text-lg hover:text-bnpl-light-blue transition">
+            <Link to="/login" className="text-lg hover:text-bnpl-light-blue transition">
               For Merchants
             </Link>
             <Link

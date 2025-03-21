@@ -31,14 +31,32 @@ const LandingPage = () => {
     { name: "PayLess", description: "Improving financial growth" },
   ];
 
-  // Handle Shop Now click to pass category to CustomerDashboard
+  // Handle navigation to Stores page with category
   const handleShopNow = (category) => {
-    navigate(`/customer-dashboard?category=${category.toLowerCase().replace(" & ", "-")}`);
+    navigate(`/stores?category=${category.toLowerCase().replace(" & ", "-")}`);
+  };
+
+  // Function to scroll to Our Partners section
+  const scrollToPartners = () => {
+    const partnersSection = document.getElementById("our-partners");
+    if (partnersSection) {
+      partnersSection.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
+  // Function to scroll to Stores section
+  const scrollToStores = () => {
+    const storesSection = document.getElementById("stores");
+    if (storesSection) {
+      storesSection.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMobileMenuOpen(false);
   };
 
   return (
     <div className="min-h-screen bg-gray-100 font-sans">
-      {/* Navbar Section (PayPal-inspired, updated to link to HowItWorks.js) */}
+      {/* Navbar Section */}
       <nav className="bg-bnpl-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="text-2xl font-bold">
@@ -50,12 +68,18 @@ const LandingPage = () => {
             <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
               How It Works
             </Link>
-            <Link to="/customers" className="text-lg hover:text-bnpl-light-blue transition">
-              For Customers
-            </Link>
-            <Link to="/merchants" className="text-lg hover:text-bnpl-light-blue transition">
-              For Merchants
-            </Link>
+            <button
+              onClick={scrollToStores}
+              className="text-lg hover:text-bnpl-light-blue transition"
+            >
+              Stores
+            </button>
+            <button
+              onClick={scrollToPartners}
+              className="text-lg hover:text-bnpl-light-blue transition"
+            >
+              Our Partners
+            </button>
             <Link
               to="/customer-signup"
               className="bg-white text-bnpl-blue px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:text-white transition"
@@ -85,12 +109,18 @@ const LandingPage = () => {
               <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
                 How It Works
               </Link>
-              <Link to="/customers" className="text-lg hover:text-bnpl-light-blue transition">
-                For Customers
-              </Link>
-              <Link to="/merchants" className="text-lg hover:text-bnpl-light-blue transition">
-                For Merchants
-              </Link>
+              <button
+                onClick={scrollToStores}
+                className="text-lg hover:text-bnpl-light-blue transition"
+              >
+                Stores
+              </button>
+              <button
+                onClick={scrollToPartners}
+                className="text-lg hover:text-bnpl-light-blue transition"
+              >
+                Our Partners
+              </button>
               <Link
                 to="/customer-signup"
                 className="bg-white text-bnpl-blue px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:text-white transition"
@@ -258,9 +288,9 @@ const LandingPage = () => {
       </section>
 
       {/* Store Categories Section */}
-      <section className="max-w-7xl mx-auto py-12 px-6">
+      <section className="max-w-7xl mx-auto py-12 px-6" id="stores">
         <h2 className="text-3xl font-bold text-black text-center mb-10">
-          Explore Our Store Categories
+          Stores
         </h2>
         <p className="text-lg text-gray-700 text-center mb-8">
           Shop with BNPL across a wide range of categories at our partner stores.
@@ -285,7 +315,7 @@ const LandingPage = () => {
       </section>
 
       {/* Our Partners Section */}
-      <section className="max-w-7xl mx-auto py-12 px-6">
+      <section className="max-w-7xl mx-auto py-12 px-6" id="our-partners">
         <h2 className="text-3xl font-bold text-black text-center mb-10">
           Our Partners
         </h2>
@@ -302,6 +332,8 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* Terms Section */}
+      <section className="max-w-7xl mx-auto py-12 px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div id="terms-customers" className="bg-white p-8 rounded-md shadow-md border border-gray-200">
             <h3 className="text-xl font-bold text-black mb-4">For Customers</h3>
@@ -332,8 +364,8 @@ const LandingPage = () => {
             </ul>
           </div>
         </div>
-        <div className="text-center mt-10">
-        </div>
+      </section>
+
       {/* Footer Section */}
       <footer className="bg-bnpl-blue text-white py-12 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">

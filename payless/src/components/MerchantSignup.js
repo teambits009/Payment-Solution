@@ -39,7 +39,7 @@ const MerchantSignup = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 font-sans">
-      {/* Navbar (PayPal-inspired, matched with LandingPage) */}
+      {/* Navbar (PayPal-inspired, updated for Merchant focus) */}
       <nav className="bg-bnpl-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="text-2xl font-bold">
@@ -51,10 +51,10 @@ const MerchantSignup = () => {
             <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
               How It Works
             </Link>
-            <Link to="/customers" className="text-lg hover:text-bnpl-light-blue transition">
-              For Customers
+            <Link to="/stores" className="text-lg hover:text-bnpl-light-blue transition">
+              Stores
             </Link>
-            <Link to="/merchants" className="text-lg hover:text-bnpl-light-blue transition">
+            <Link to="/merchant-signup" className="text-lg hover:text-bnpl-light-blue transition">
               For Merchants
             </Link>
             <Link
@@ -80,10 +80,10 @@ const MerchantSignup = () => {
               <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
                 How It Works
               </Link>
-              <Link to="/customers" className="text-lg hover:text-bnpl-light-blue transition">
-                For Customers
+              <Link to="/stores" className="text-lg hover:text-bnpl-light-blue transition">
+                Stores
               </Link>
-              <Link to="/merchants" className="text-lg hover:text-bnpl-light-blue transition">
+              <Link to="/merchant-signup" className="text-lg hover:text-bnpl-light-blue transition">
                 For Merchants
               </Link>
               <Link
