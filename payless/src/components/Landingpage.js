@@ -433,6 +433,9 @@ const LandingPage = () => {
             </form>
           </div>
         </div>
+        <div className="max-w-7xl mx-auto text-center mt-8">
+          <p className="text-sm text-gray-200">Powered by TechOps Apex</p>
+        </div>
       </footer>
     </div>
   );

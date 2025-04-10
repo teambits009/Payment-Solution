@@ -3,7 +3,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Bar } from "react-chartjs-2";
 import { Chart } from "chart.js/auto";
 Chart.register();
-
+ ''
 // Navbar Component
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
