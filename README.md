@@ -145,7 +145,7 @@ MIT License — [LICENSE](LICENSE)
 
 - GitHub: [github.com/teambits009](https://github.com/teambits009)
 - Email: [brandon@techopsapex.com](mailto:brandon@techopsapex.com)
-- LinkedIn: [TechOps Apex](https://linkedin.com/company/techopsapex)
+- LinkedIn: [TechOps Apex](https://www.linkedin.com/in/brandon-opere-14b5a5203/)
 
 ---
 
