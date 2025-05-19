@@ -6,26 +6,26 @@ const Navbar = ({ signupPath, signupText }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-Safarigamers-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
+    <nav className="bg-BNPL-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold">
-          <Link to="/" className="hover:text-Safarigamers-light-blue transition">
-            Safarigamers
+          <Link to="/" className="hover:text-BNPL-light-blue transition">
+            BNPL
           </Link>
         </div>
         <div className="hidden md:flex space-x-6 items-center">
-          <Link to="/how-it-works" className="text-lg hover:text-Safarigamers-light-blue transition">
+          <Link to="/how-it-works" className="text-lg hover:text-BNPL-light-blue transition">
             How It Works
           </Link>
-          <Link to="/login" className="text-lg hover:text-Safarigamers-light-blue transition">
+          <Link to="/login" className="text-lg hover:text-BNPL-light-blue transition">
             For Customers
           </Link>
-          <Link to="/login" className="text-lg hover:text-Safarigamers-light-blue transition">
+          <Link to="/login" className="text-lg hover:text-BNPL-light-blue transition">
             For Merchants
           </Link>
           <Link
             to={signupPath}
-            className="bg-white text-Safarigamers-blue px-6 py-2 rounded-md font-medium hover:bg-Safarigamers-light-blue hover:text-white transition"
+            className="bg-white text-BNPL-blue px-6 py-2 rounded-md font-medium hover:bg-BNPL-light-blue hover:text-white transition"
           >
             {signupText}
           </Link>
@@ -41,20 +41,20 @@ const Navbar = ({ signupPath, signupText }) => {
         </div>
       </div>
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-Safarigamers-blue py-4">
+        <div className="md:hidden bg-BNPL-blue py-4">
           <div className="flex flex-col space-y-4 text-center">
-            <Link to="/how-it-works" className="text-lg hover:text-Safarigamers-light-blue transition">
+            <Link to="/how-it-works" className="text-lg hover:text-BNPL-light-blue transition">
               How It Works
             </Link>
-            <Link to="/login" className="text-lg hover:text-Safarigamers-light-blue transition">
+            <Link to="/login" className="text-lg hover:text-BNPL-light-blue transition">
               For Customers
             </Link>
-            <Link to="/login" className="text-lg hover:text-Safarigamers-light-blue transition">
+            <Link to="/login" className="text-lg hover:text-BNPL-light-blue transition">
               For Merchants
             </Link>
             <Link
               to={signupPath}
-              className="bg-white text-Safarigamers-blue px-6 py-2 rounded-md font-medium hover:bg-Safarigamers-light-blue hover:text-white transition"
+              className="bg-white text-BNPL-blue px-6 py-2 rounded-md font-medium hover:bg-BNPL-light-blue hover:text-white transition"
             >
               {signupText}
             </Link>
@@ -89,7 +89,7 @@ const InputField = ({ id, label, type, name, value, onChange, required = true })
       name={name}
       value={value}
       onChange={onChange}
-      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-Safarigamers-blue"
+      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-BNPL-blue"
       required={required}
     />
   </div>
@@ -99,7 +99,7 @@ const InputField = ({ id, label, type, name, value, onChange, required = true })
 const SubmitButton = ({ text }) => (
   <button
     type="submit"
-    className="w-full bg-Safarigamers-blue text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-all duration-200"
+    className="w-full bg-BNPL-blue text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-all duration-200"
   >
     {text}
   </button>
@@ -109,13 +109,13 @@ const SubmitButton = ({ text }) => (
 const LinksSection = ({ forgotPath = "/forgot-password", signupPath, signupText, alternatePath, alternateText }) => (
   <div className="mt-6 space-y-2 text-center text-gray-700">
     <p>
-      <Link to={forgotPath} className="text-Safarigamers-blue hover:underline font-medium">
+      <Link to={forgotPath} className="text-BNPL-blue hover:underline font-medium">
         Forgot Password?
       </Link>
     </p>
     <p>
       Don’t have an account?{" "}
-      <Link to={signupPath} className="text-Safarigamers-blue hover:underline font-medium">
+      <Link to={signupPath} className="text-BNPL-blue hover:underline font-medium">
         {signupText}
       </Link>
     </p>
@@ -158,7 +158,7 @@ const Login = () => {
             className={`px-4 py-2 rounded-md font-medium transition-all duration-200 ${
               isMerchant
                 ? "bg-gray-200 text-gray-700"
-                : "bg-Safarigamers-blue text-white hover:bg-blue-800"
+                : "bg-BNPL-blue text-white hover:bg-blue-800"
             }`}
           >
             Customer
@@ -167,7 +167,7 @@ const Login = () => {
             onClick={toggleLoginType}
             className={`ml-4 px-4 py-2 rounded-md font-medium transition-all duration-200 ${
               isMerchant
-                ? "bg-Safarigamers-blue text-white hover:bg-blue-800"
+                ? "bg-BNPL-blue text-white hover:bg-blue-800"
                 : "bg-gray-200 text-gray-700"
             }`}
           >
@@ -204,15 +204,15 @@ const Login = () => {
           <p className="text-sm text-gray-600 text-center">
             {isMerchant ? (
               <>
-                Log in to <span className="text-Safarigamers-blue font-semibold">increase sales</span>, get{" "}
-                <span className="text-Safarigamers-blue font-semibold">paid upfront</span>, and manage Safarigamers{" "}
-                <span className="text-Safarigamers-blue font-semibold">easily</span>.
+                Log in to <span className="text-BNPL-blue font-semibold">increase sales</span>, get{" "}
+                <span className="text-BNPL-blue font-semibold">paid upfront</span>, and manage BNPL{" "}
+                <span className="text-BNPL-blue font-semibold">easily</span>.
               </>
             ) : (
               <>
-                Log in to enjoy <span className="text-Safarigamers-blue font-semibold">flexible payments</span>,{" "}
-                <span className="text-Safarigamers-blue font-semibold">no hidden fees</span>, and shop at{" "}
-                <span className="text-Safarigamers-blue font-semibold">thousands of stores</span>.
+                Log in to enjoy <span className="text-BNPL-blue font-semibold">flexible payments</span>,{" "}
+                <span className="text-BNPL-blue font-semibold">no hidden fees</span>, and shop at{" "}
+                <span className="text-BNPL-blue font-semibold">thousands of stores</span>.
               </>
             )}
           </p>

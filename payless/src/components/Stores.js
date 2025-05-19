@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="bg-Safarigamers-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
+    <nav className="bg-bnpl-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold">
-          <Link to="/" className="hover:text-Safarigamers-light-blue transition">
-            Safarigamers
+          <Link to="/" className="hover:text-bnpl-light-blue transition">
+            bnpl
           </Link>
         </div>
         <div className="hidden md:flex space-x-6 items-center">
-          <Link to="/customer-dashboard" className="text-lg hover:text-Safarigamers-light-blue transition">
+          <Link to="/customer-dashboard" className="text-lg hover:text-bnpl-light-blue transition">
             Dashboard
           </Link>
-          <Link to="/how-it-works" className="text-lg hover:text-Safarigamers-light-blue transition">
+          <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
             How It Works
           </Link>
         </div>
@@ -26,7 +26,7 @@ const Navbar = () => {
 const ShopNow = () => {
   // Expanded merchant data with 12 partners across various categories
   const allMerchants = [
-    { name: "TechStore", category: "Electronics", logo: "techstore-logo.png", offer: "10% off with Safarigamers", url: "/stores/techstore" },
+    { name: "TechStore", category: "Electronics", logo: "techstore-logo.png", offer: "10% off with bnpl", url: "/stores/techstore" },
     { name: "FashionHub", category: "Fashion", logo: "fashionhub-logo.png", offer: "Free shipping", url: "/stores/fashionhub" },
     { name: "HomeDecor", category: "Home Goods", logo: "homedecor-logo.png", offer: "5% cashback", url: "/stores/homedecor" },
     { name: "BookNook", category: "Books", logo: "booknook-logo.png", offer: "15% off first purchase", url: "/stores/booknook" },
@@ -60,20 +60,20 @@ const ShopNow = () => {
     <div className="min-h-screen bg-gray-100 font-sans">
       <Navbar />
       <div className="max-w-7xl mx-auto py-12 px-6">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">Shop with Safarigamers Safarigamers</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">Shop with bnpl bnpl</h1>
 
         {/* Credit Reminder Banner */}
         <div className="bg-white border border-gray-200 rounded-lg shadow-md mb-8 p-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-gray-700 font-medium text-center sm:text-left relative group">
             You have{" "}
-            <span className="text-Safarigamers-blue font-bold">${availableCredit.toFixed(2)}</span> available to shop with Safarigamers!
+            <span className="text-bnpl-blue font-bold">${availableCredit.toFixed(2)}</span> available to shop with bnpl!
             <span className="absolute hidden group-hover:block bg-gray-800 text-white text-xs rounded p-2 -top-10 left-1/2 transform -translate-x-1/2 sm:left-0 sm:translate-x-0 z-10 w-48">
               Split your purchases into affordable payments!
             </span>
           </p>
           <Link
-            to="/apply-Safarigamers"
-            className="bg-Safarigamers-blue text-white px-6 py-2 rounded-md font-medium hover:bg-blue-800 transition-all duration-200 shadow-md hover:shadow-lg"
+            to="/apply-bnpl"
+            className="bg-bnpl-blue text-white px-6 py-2 rounded-md font-medium hover:bg-blue-800 transition-all duration-200 shadow-md hover:shadow-lg"
           >
             Increase Credit
           </Link>
@@ -86,7 +86,7 @@ const ShopNow = () => {
             placeholder="Search merchants (e.g., TechStore)"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-Safarigamers-blue text-gray-700 placeholder-gray-400"
+            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue text-gray-700 placeholder-gray-400"
           />
           <svg
             className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500"
@@ -109,8 +109,8 @@ const ShopNow = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                   selectedCategory === category
-                    ? "bg-Safarigamers-blue text-white"
-                    : "bg-gray-100 text-gray-700 hover:bg-Safarigamers-blue hover:text-white"
+                    ? "bg-bnpl-blue text-white"
+                    : "bg-gray-100 text-gray-700 hover:bg-bnpl-blue hover:text-white"
                 }`}
               >
                 {category}
@@ -142,7 +142,7 @@ const ShopNow = () => {
                 )}
                 <Link
                   to={merchant.url}
-                  className="bg-Safarigamers-blue text-white px-4 py-2 rounded-md font-medium hover:bg-blue-800 transition-all duration-200"
+                  className="bg-bnpl-blue text-white px-4 py-2 rounded-md font-medium hover:bg-blue-800 transition-all duration-200"
                 >
                   Shop Now
                 </Link>
@@ -157,8 +157,8 @@ const ShopNow = () => {
         {/* Educational Footer */}
         <div className="mt-8 text-center">
           <p className="text-sm text-gray-600 italic">
-            Shop with ease using your Safarigamers credit. Split payments over time at checkout.{" "}
-            <Link to="/how-it-works" className="text-Safarigamers-blue hover:underline">
+            Shop with ease using your bnpl credit. Split payments over time at checkout.{" "}
+            <Link to="/how-it-works" className="text-bnpl-blue hover:underline">
               Learn More
             </Link>
           </p>

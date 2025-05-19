@@ -57,38 +57,38 @@ const LandingPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 font-sans">
       {/* Navbar Section */}
-      <nav className="bg-Safarigamers-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
+      <nav className="bg-bnpl-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="text-2xl font-bold">
-            <Link to="/" className="hover:text-Safarigamers-light-blue transition">
-              Safarigamers
+            <Link to="/" className="hover:text-bnpl-light-blue transition">
+              bnpl
             </Link>
           </div>
           <div className="hidden md:flex space-x-6 items-center">
-            <Link to="/how-it-works" className="text-lg hover:text-Safarigamers-light-blue transition">
+            <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
               How It Works
             </Link>
             <button
               onClick={scrollToStores}
-              className="text-lg hover:text-Safarigamers-light-blue transition"
+              className="text-lg hover:text-bnpl-light-blue transition"
             >
               Stores
             </button>
             <button
               onClick={scrollToPartners}
-              className="text-lg hover:text-Safarigamers-light-blue transition"
+              className="text-lg hover:text-bnpl-light-blue transition"
             >
               Our Partners
             </button>
             <Link
               to="/customer-signup"
-              className="bg-white text-Safarigamers-blue px-6 py-2 rounded-md font-medium hover:bg-Safarigamers-light-blue hover:text-white transition"
+              className="bg-white text-bnpl-blue px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:text-white transition"
             >
               Sign Up
             </Link>
             <Link
               to="/login"
-              className="border border-white px-6 py-2 rounded-md font-medium hover:bg-Safarigamers-light-blue hover:border-Safarigamers-light-blue transition"
+              className="border border-white px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:border-bnpl-light-blue transition"
             >
               Login
             </Link>
@@ -104,32 +104,32 @@ const LandingPage = () => {
           </div>
         </div>
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-Safarigamers-blue py-4">
+          <div className="md:hidden bg-bnpl-blue py-4">
             <div className="flex flex-col space-y-4 text-center">
-              <Link to="/how-it-works" className="text-lg hover:text-Safarigamers-light-blue transition">
+              <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
                 How It Works
               </Link>
               <button
                 onClick={scrollToStores}
-                className="text-lg hover:text-Safarigamers-light-blue transition"
+                className="text-lg hover:text-bnpl-light-blue transition"
               >
                 Stores
               </button>
               <button
                 onClick={scrollToPartners}
-                className="text-lg hover:text-Safarigamers-light-blue transition"
+                className="text-lg hover:text-bnpl-light-blue transition"
               >
                 Our Partners
               </button>
               <Link
                 to="/customer-signup"
-                className="bg-white text-Safarigamers-blue px-6 py-2 rounded-md font-medium hover:bg-Safarigamers-light-blue hover:text-white transition"
+                className="bg-white text-bnpl-blue px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:text-white transition"
               >
                 Sign Up
               </Link>
               <Link
                 to="/login"
-                className="border border-white px-6 py-2 rounded-md font-medium hover:bg-Safarigamers-light-blue hover:border-Safarigamers-light-blue transition"
+                className="border border-white px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:border-bnpl-light-blue transition"
               >
                 Login
               </Link>
@@ -139,7 +139,7 @@ const LandingPage = () => {
       </nav>
 
       {/* Hero Section */}
-      <header className="bg-Safarigamers-blue text-white py-24 px-6 shadow-md">
+      <header className="bg-bnpl-blue text-white py-24 px-6 shadow-md">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Shop with Ease
@@ -151,7 +151,7 @@ const LandingPage = () => {
             <div className="flex flex-col items-center">
               <Link
                 to="/customer-signup"
-                className="bg-white text-Safarigamers-blue px-8 py-4 rounded-md font-medium text-lg hover:bg-Safarigamers-light-blue hover:text-white transition-all duration-200"
+                className="bg-white text-bnpl-blue px-8 py-4 rounded-md font-medium text-lg hover:bg-bnpl-light-blue hover:text-white transition-all duration-200"
               >
                 Get Started as a Customer
               </Link>
@@ -159,7 +159,7 @@ const LandingPage = () => {
             <div className="flex flex-col items-center">
               <Link
                 to="/merchant-signup"
-                className="border border-white px-8 py-4 rounded-md font-medium text-lg hover:bg-Safarigamers-light-blue hover:border-Safarigamers-light-blue transition-all duration-200"
+                className="border border-white px-8 py-4 rounded-md font-medium text-lg hover:bg-bnpl-light-blue hover:border-bnpl-light-blue transition-all duration-200"
               >
                 Join as a Merchant
               </Link>
@@ -175,21 +175,21 @@ const LandingPage = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white p-8 rounded-md shadow-md border border-gray-200 text-center">
-            <div className="text-Safarigamers-blue text-4xl mb-4">💸</div>
+            <div className="text-bnpl-blue text-4xl mb-4">💸</div>
             <h3 className="text-xl font-bold text-black mb-4">Flexible Payments</h3>
             <p className="text-gray-700">
               Split your purchases into 3, 6, or 12 easy installments.
             </p>
           </div>
           <div className="bg-white p-8 rounded-md shadow-md border border-gray-200 text-center">
-            <div className="text-Safarigamers-blue text-4xl mb-4">🌟</div>
+            <div className="text-bnpl-blue text-4xl mb-4">🌟</div>
             <h3 className="text-xl font-bold text-black mb-4">No Hidden Fees</h3>
             <p className="text-gray-700">
               Transparent pricing with zero interest on timely payments.
             </p>
           </div>
           <div className="bg-white p-8 rounded-md shadow-md border border-gray-200 text-center">
-            <div className="text-Safarigamers-blue text-4xl mb-4">📊</div>
+            <div className="text-bnpl-blue text-4xl mb-4">📊</div>
             <h3 className="text-xl font-bold text-black mb-4">Credit Score Growth</h3>
             <p className="text-gray-700">
               Boost your score with every purchase and payment.
@@ -201,28 +201,28 @@ const LandingPage = () => {
       {/* Merchant Benefits Section */}
       <section className="max-w-7xl mx-auto py-12 px-6">
         <h2 className="text-3xl font-bold text-black text-center mb-10">
-          Boost Your Business with Safarigamers
+          Boost Your Business with bnpl
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white p-8 rounded-md shadow-md border border-gray-200 text-center">
-            <div className="text-Safarigamers-blue text-4xl mb-4">📈</div>
+            <div className="text-bnpl-blue text-4xl mb-4">📈</div>
             <h3 className="text-xl font-bold text-black mb-4">Increase Sales</h3>
             <p className="text-gray-700">
               Customers with higher Credit Scores buy more.
             </p>
           </div>
           <div className="bg-white p-8 rounded-md shadow-md border border-gray-200 text-center">
-            <div className="text-Safarigamers-blue text-4xl mb-4">💰</div>
+            <div className="text-bnpl-blue text-4xl mb-4">💰</div>
             <h3 className="text-xl font-bold text-black mb-4">Get Paid Upfront</h3>
             <p className="text-gray-700">
               Receive full payment while we manage installments.
             </p>
           </div>
           <div className="bg-white p-8 rounded-md shadow-md border border-gray-200 text-center">
-            <div className="text-Safarigamers-blue text-4xl mb-4">⚙️</div>
+            <div className="text-bnpl-blue text-4xl mb-4">⚙️</div>
             <h3 className="text-xl font-bold text-black mb-4">Easy Integration</h3>
             <p className="text-gray-700">
-              Add Safarigamers to your store effortlessly.
+              Add bnpl to your store effortlessly.
             </p>
           </div>
         </div>
@@ -230,7 +230,7 @@ const LandingPage = () => {
           <div className="flex flex-col items-center">
             <Link
               to="/merchant-signup"
-              className="bg-Safarigamers-blue text-white px-8 py-4 rounded-md font-medium text-lg hover:bg-blue-800 transition-all duration-200"
+              className="bg-bnpl-blue text-white px-8 py-4 rounded-md font-medium text-lg hover:bg-blue-800 transition-all duration-200"
             >
               Become a Merchant Partner
             </Link>
@@ -248,18 +248,18 @@ const LandingPage = () => {
             <h3 className="text-xl font-bold text-black mb-4">For Customers</h3>
             <ol className="space-y-4 text-gray-700 list-decimal pl-5">
               <li>
-                <span className="text-Safarigamers-blue font-semibold">Sign Up & Build Credit Score:</span> Join Safarigamers and start with a base Credit Score. Buy 5+ items or spend $200 to grow it.
+                <span className="text-bnpl-blue font-semibold">Sign Up & Build Credit Score:</span> Join bnpl and start with a base Credit Score. Buy 5+ items or spend $200 to grow it.
               </li>
               <li>
-                <span className="text-Safarigamers-blue font-semibold">Shop with Your Score:</span> Use Safarigamers at checkout—your score determines eligibility (e.g., $699 item needs $500 spent).
+                <span className="text-bnpl-blue font-semibold">Shop with Your Score:</span> Use bnpl at checkout—your score determines eligibility (e.g., $699 item needs $500 spent).
               </li>
               <li>
-                <span className="text-Safarigamers-blue font-semibold">Pay Later & Boost Score:</span> Choose 3, 6, or 12 months. On-time payments raise your score (e.g., +$200 after 3 payments).
+                <span className="text-bnpl-blue font-semibold">Pay Later & Boost Score:</span> Choose 3, 6, or 12 months. On-time payments raise your score (e.g., +$200 after 3 payments).
               </li>
             </ol>
             <Link
               to="/how-it-works#customers"
-              className="mt-4 inline-block text-Safarigamers-blue hover:underline font-medium"
+              className="mt-4 inline-block text-bnpl-blue hover:underline font-medium"
             >
               Learn More
             </Link>
@@ -268,18 +268,18 @@ const LandingPage = () => {
             <h3 className="text-xl font-bold text-black mb-4">For Merchants</h3>
             <ol className="space-y-4 text-gray-700 list-decimal pl-5">
               <li>
-                <span className="text-Safarigamers-blue font-semibold">Register:</span> Join our network—customer eligibility is based on their Credit Score from purchases.
+                <span className="text-bnpl-blue font-semibold">Register:</span> Join our network—customer eligibility is based on their Credit Score from purchases.
               </li>
               <li>
-                <span className="text-Safarigamers-blue font-semibold">Offer Safarigamers:</span> Let customers shop with their score—higher scores mean bigger sales.
+                <span className="text-bnpl-blue font-semibold">Offer bnpl:</span> Let customers shop with their score—higher scores mean bigger sales.
               </li>
               <li>
-                <span className="text-Safarigamers-blue font-semibold">Get Paid:</span> Receive full payment upfront while we handle repayments tied to their score.
+                <span className="text-bnpl-blue font-semibold">Get Paid:</span> Receive full payment upfront while we handle repayments tied to their score.
               </li>
             </ol>
             <Link
               to="/how-it-works#merchants"
-              className="mt-4 inline-block text-Safarigamers-blue hover:underline font-medium"
+              className="mt-4 inline-block text-bnpl-blue hover:underline font-medium"
             >
               Learn More
             </Link>
@@ -293,7 +293,7 @@ const LandingPage = () => {
           Stores
         </h2>
         <p className="text-lg text-gray-700 text-center mb-8">
-          Shop with Safarigamers across a wide range of categories at our partner stores.
+          Shop with bnpl across a wide range of categories at our partner stores.
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {storeCategories.map((category) => (
@@ -305,7 +305,7 @@ const LandingPage = () => {
               <p className="text-lg font-bold text-black mb-4">{category.name}</p>
               <button
                 onClick={() => handleShopNow(category.name)}
-                className="text-Safarigamers-blue hover:underline text-lg font-medium"
+                className="text-bnpl-blue hover:underline text-lg font-medium"
               >
                 Shop Now
               </button>
@@ -339,13 +339,13 @@ const LandingPage = () => {
             <h3 className="text-xl font-bold text-black mb-4">For Customers</h3>
             <ul className="space-y-4 text-gray-700 list-disc pl-5">
               <li>
-                <span className="text-Safarigamers-blue font-semibold">Eligibility:</span> Must be 18+ and registered with Safarigamers. Credit Score based on purchase history determines Safarigamers limits.
+                <span className="text-bnpl-blue font-semibold">Eligibility:</span> Must be 18+ and registered with bnpl. Credit Score based on purchase history determines bnpl limits.
               </li>
               <li>
-                <span className="text-Safarigamers-blue font-semibold">Payments:</span> Choose 3, 6, or 12-month plans. Late payments may reduce your Credit Score and incur fees.
+                <span className="text-bnpl-blue font-semibold">Payments:</span> Choose 3, 6, or 12-month plans. Late payments may reduce your Credit Score and incur fees.
               </li>
               <li>
-                <span className="text-Safarigamers-blue font-semibold">Usage:</span> Safarigamers is available only at partner stores. No refunds for early repayments.
+                <span className="text-bnpl-blue font-semibold">Usage:</span> bnpl is available only at partner stores. No refunds for early repayments.
               </li>
             </ul>
           </div>
@@ -353,13 +353,13 @@ const LandingPage = () => {
             <h3 className="text-xl font-bold text-black mb-4">For Merchants</h3>
             <ul className="space-y-4 text-gray-700 list-disc pl-5">
               <li>
-                <span className="text-Safarigamers-blue font-semibold">Partnership:</span> Must integrate Safarigamers Safarigamers via our API. Full payment issued upon sale.
+                <span className="text-bnpl-blue font-semibold">Partnership:</span> Must integrate bnpl bnpl via our API. Full payment issued upon sale.
               </li>
               <li>
-                <span className="text-Safarigamers-blue font-semibold">Fees:</span> A small transaction fee applies per Safarigamers sale. No chargebacks for non-payment by customers.
+                <span className="text-bnpl-blue font-semibold">Fees:</span> A small transaction fee applies per bnpl sale. No chargebacks for non-payment by customers.
               </li>
               <li>
-                <span className="text-Safarigamers-blue font-semibold">Compliance:</span> Adhere to Safarigamers policies and local regulations for Safarigamers offerings.
+                <span className="text-bnpl-blue font-semibold">Compliance:</span> Adhere to bnpl policies and local regulations for bnpl offerings.
               </li>
             </ul>
           </div>
@@ -367,35 +367,35 @@ const LandingPage = () => {
       </section>
 
       {/* Footer Section */}
-      <footer className="bg-Safarigamers-blue text-white py-12 px-6">
+      <footer className="bg-bnpl-blue text-white py-12 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">Safarigamers</h3>
+            <h3 className="text-2xl font-bold mb-4">bnpl</h3>
             <p className="text-gray-200 mb-4">
               Empowering flexible payments for customers and growth for merchants since 2025.
             </p>
-            <p className="text-sm">© 2025 Safarigamers. All rights reserved.</p>
+            <p className="text-sm">© 2025 bnpl. All rights reserved.</p>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Explore</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/how-it-works" className="hover:text-Safarigamers-light-blue transition">
+                <Link to="/how-it-works" className="hover:text-bnpl-light-blue transition">
                   How It Works
                 </Link>
               </li>
               <li>
-                <Link to="/customer-signup" className="hover:text-Safarigamers-light-blue transition">
+                <Link to="/customer-signup" className="hover:text-bnpl-light-blue transition">
                   For Customers
                 </Link>
               </li>
               <li>
-                <Link to="/merchant-signup" className="hover:text-Safarigamers-light-blue transition">
+                <Link to="/merchant-signup" className="hover:text-bnpl-light-blue transition">
                   For Merchants
                 </Link>
               </li>
               <li>
-                <Link to="/faq" className="hover:text-Safarigamers-light-blue transition">
+                <Link to="/faq" className="hover:text-bnpl-light-blue transition">
                   FAQ
                 </Link>
               </li>
@@ -404,7 +404,7 @@ const LandingPage = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Get in Touch</h4>
             <p className="text-gray-200 mb-2">
-              Email: <Link to="mailto:support@Safarigamerssystem.com" className="hover:text-Safarigamers-light-blue">support@Safarigamerssystem.com</Link>
+              Email: <Link to="mailto:support@bnplsystem.com" className="hover:text-bnpl-light-blue">support@bnplsystem.com</Link>
             </p>
             <p className="text-gray-200 mb-2">
               Phone: <span className="font-medium">+1 (800) 123-4567</span>
@@ -422,11 +422,11 @@ const LandingPage = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="px-4 py-2 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-Safarigamers-blue"
+                className="px-4 py-2 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
               />
               <button
                 type="submit"
-                className="bg-Safarigamers-blue text-white px-4 py-2 rounded-md font-medium hover:bg-blue-800 transition-all duration-200"
+                className="bg-bnpl-blue text-white px-4 py-2 rounded-md font-medium hover:bg-blue-800 transition-all duration-200"
               >
                 Subscribe
               </button>
