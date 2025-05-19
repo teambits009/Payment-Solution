@@ -157,7 +157,7 @@ const ShopNow = () => {
         {/* Educational Footer */}
         <div className="mt-8 text-center">
           <p className="text-sm text-gray-600 italic">
-            Shop with ease using your bnplcredit. Split payments over time at checkout.{" "}
+            Shop with ease using your Safarigamers credit. Split payments over time at checkout.{" "}
             <Link to="/how-it-works" className="text-bnpl-blue hover:underline">
               Learn More
             </Link>

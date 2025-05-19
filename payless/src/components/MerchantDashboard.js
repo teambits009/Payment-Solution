@@ -150,7 +150,7 @@ const MerchantDashboard = () => {
 
       {/* bnpl Transactions Table Section with Credit Worthiness */}
       <section className="max-w-7xl mx-auto py-8 px-6 bg-white">
-        <h2 className="text-2xl font-bold text-black mb-4">bnplPurchase Tracking</h2>
+        <h2 className="text-2xl font-bold text-black mb-4">Safarigamers Purchase Tracking</h2>
         <div className="overflow-x-auto">
           <table className="w-full border border-gray-200 rounded-md shadow-md">
             <thead className="bg-gray-50">
@@ -255,7 +255,7 @@ const MerchantDashboard = () => {
       <footer className="bg-Safarigamers-blue text-white py-6 px-6 text-center">
         <p className="text-sm text-gray-200">
           © 2025 Safarigamers. All rights reserved. |{" "}
-          <Link to="mailto:support@bnplsystem.com" className="text-bnpl-blue hover:underline">
+          <Link to="mailto:support@Safarigamerssystem.com" className="text-bnpl-blue hover:underline">
             Support
           </Link>{" "}
           Privacy Policy{" "}

@@ -310,4 +310,4 @@ const ApplyForbnpl = () => {
   );
 };
 
-export default ApplyForSafarigamers;
+export default ApplyForbnpl;

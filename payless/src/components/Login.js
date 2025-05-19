@@ -9,7 +9,7 @@ const Navbar = ({ signupPath, signupText }) => {
     <nav className="bg-bnpl-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold">
-          <Link to="/" className="hover:text-bnpl-light-blue transition">
+          <Link to="/LandingPage" className="hover:text-bnpl-light-blue transition">
             Safarigamers
           </Link>
         </div>
