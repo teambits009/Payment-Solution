@@ -61,7 +61,7 @@ const LandingPage = () => {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="text-2xl font-bold">
             <Link to="/" className="hover:text-bnpl-light-blue transition">
-              Genesis
+              Safarigamers
             </Link>
           </div>
           <div className="hidden md:flex space-x-6 items-center">
@@ -248,7 +248,7 @@ const LandingPage = () => {
             <h3 className="text-xl font-bold text-black mb-4">For Customers</h3>
             <ol className="space-y-4 text-gray-700 list-decimal pl-5">
               <li>
-                <span className="text-bnpl-blue font-semibold">Sign Up & Build Credit Score:</span> Join Genesis and start with a base Credit Score. Buy 5+ items or spend $200 to grow it.
+                <span className="text-bnpl-blue font-semibold">Sign Up & Build Credit Score:</span> Join Safarigamers and start with a base Credit Score. Buy 5+ items or spend $200 to grow it.
               </li>
               <li>
                 <span className="text-bnpl-blue font-semibold">Shop with Your Score:</span> Use BNPL at checkout—your score determines eligibility (e.g., $699 item needs $500 spent).
@@ -339,7 +339,7 @@ const LandingPage = () => {
             <h3 className="text-xl font-bold text-black mb-4">For Customers</h3>
             <ul className="space-y-4 text-gray-700 list-disc pl-5">
               <li>
-                <span className="text-bnpl-blue font-semibold">Eligibility:</span> Must be 18+ and registered with Genesis. Credit Score based on purchase history determines BNPL limits.
+                <span className="text-bnpl-blue font-semibold">Eligibility:</span> Must be 18+ and registered with Safarigamers. Credit Score based on purchase history determines BNPL limits.
               </li>
               <li>
                 <span className="text-bnpl-blue font-semibold">Payments:</span> Choose 3, 6, or 12-month plans. Late payments may reduce your Credit Score and incur fees.
@@ -353,13 +353,13 @@ const LandingPage = () => {
             <h3 className="text-xl font-bold text-black mb-4">For Merchants</h3>
             <ul className="space-y-4 text-gray-700 list-disc pl-5">
               <li>
-                <span className="text-bnpl-blue font-semibold">Partnership:</span> Must integrate Genesis BNPL via our API. Full payment issued upon sale.
+                <span className="text-bnpl-blue font-semibold">Partnership:</span> Must integrate Safarigamers BNPL via our API. Full payment issued upon sale.
               </li>
               <li>
                 <span className="text-bnpl-blue font-semibold">Fees:</span> A small transaction fee applies per BNPL sale. No chargebacks for non-payment by customers.
               </li>
               <li>
-                <span className="text-bnpl-blue font-semibold">Compliance:</span> Adhere to Genesis policies and local regulations for BNPL offerings.
+                <span className="text-bnpl-blue font-semibold">Compliance:</span> Adhere to Safarigamers policies and local regulations for BNPL offerings.
               </li>
             </ul>
           </div>
@@ -370,11 +370,11 @@ const LandingPage = () => {
       <footer className="bg-bnpl-blue text-white py-12 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">Genesis</h3>
+            <h3 className="text-2xl font-bold mb-4">Safarigamers</h3>
             <p className="text-gray-200 mb-4">
               Empowering flexible payments for customers and growth for merchants since 2025.
             </p>
-            <p className="text-sm">© 2025 Genesis. All rights reserved.</p>
+            <p className="text-sm">© 2025 Safarigamers. All rights reserved.</p>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Explore</h4>
