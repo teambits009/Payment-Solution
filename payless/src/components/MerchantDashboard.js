@@ -131,9 +131,9 @@ const MerchantDashboard = () => {
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white p-6 rounded-md shadow-md border border-gray-200 text-center">
-            <p className="text-lg font-semibold text-gray-700">Total Safarigamers Sales</p>
+            <p className="text-lg font-semibold text-gray-700">Total bnplSales</p>
             <p className="text-3xl font-bold text-bnpl-blue">${dashboardData.totalSales.toLocaleString()}</p>
-            <p className="text-sm text-gray-500">All-time sales via Safarigamers </p>
+            <p className="text-sm text-gray-500">All-time sales via bnpl</p>
           </div>
           <div className="bg-white p-6 rounded-md shadow-md border border-gray-200 text-center">
             <p className="text-lg font-semibold text-gray-700">Pending Settlements</p>
@@ -150,7 +150,7 @@ const MerchantDashboard = () => {
 
       {/* bnpl Transactions Table Section with Credit Worthiness */}
       <section className="max-w-7xl mx-auto py-8 px-6 bg-white">
-        <h2 className="text-2xl font-bold text-black mb-4">Safarigamers Purchase Tracking</h2>
+        <h2 className="text-2xl font-bold text-black mb-4">bnplPurchase Tracking</h2>
         <div className="overflow-x-auto">
           <table className="w-full border border-gray-200 rounded-md shadow-md">
             <thead className="bg-gray-50">

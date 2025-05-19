@@ -169,9 +169,9 @@ const MerchantDashboard = () => {
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white p-6 rounded-md shadow-md border border-gray-200 text-center">
-            <p className="text-lg font-semibold text-gray-700">Total Safarigamers Sales</p>
+            <p className="text-lg font-semibold text-gray-700">Total bnplSales</p>
             <p className="text-3xl font-bold text-bnpl-blue">${dashboardData.totalSales.toLocaleString()}</p>
-            <p className="text-sm text-gray-500">All-time sales via Safarigamers </p>
+            <p className="text-sm text-gray-500">All-time sales via bnpl</p>
           </div>
           <div className="bg-white p-6 rounded-md shadow-md border border-gray-200 text-center">
             <p className="text-lg font-semibold text-gray-700">Pending Settlements</p>
@@ -186,9 +186,9 @@ const MerchantDashboard = () => {
         </div>
       </section>
 
-      {/* Safarigamers Transactions Table Section */}
+      {/* bnplTransactions Table Section */}
       <section className="max-w-7xl mx-auto py-8 px-6 bg-white">
-        <h2 className="text-2xl font-bold text-black mb-4">Safarigamers Purchase Tracking</h2>
+        <h2 className="text-2xl font-bold text-black mb-4">bnplPurchase Tracking</h2>
         <div className="overflow-x-auto">
           <table className="w-full border border-gray-200 rounded-md shadow-md">
             <thead className="bg-gray-50">
@@ -373,7 +373,7 @@ export const CustomerPaymentHistory = () => {
 
         {/* BNPL Plan Info */}
         <div className="bg-white p-6 rounded-md shadow-md border border-gray-200 mb-6">
-          <h2 className="text-xl font-semibold text-gray-700 mb-4">Safarigamers Plan Information</h2>
+          <h2 className="text-xl font-semibold text-gray-700 mb-4">bnpl Plan Information</h2>
           <p className="text-gray-700"><strong>Order ID:</strong> {transaction.orderId}</p>
           <p className="text-gray-700"><strong>Purchase Date & Time:</strong> {transaction.dateTime}</p>
           <p className="text-gray-700"><strong>Total Amount:</strong> ${transaction.amount.toFixed(2)}</p>

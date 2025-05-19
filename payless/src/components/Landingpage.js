@@ -222,7 +222,7 @@ const LandingPage = () => {
             <div className="text-bnpl-blue text-4xl mb-4">⚙️</div>
             <h3 className="text-xl font-bold text-black mb-4">Easy Integration</h3>
             <p className="text-gray-700">
-              Add Safarigamers to your store effortlessly.
+              Add bnplto your store effortlessly.
             </p>
           </div>
         </div>
@@ -248,10 +248,10 @@ const LandingPage = () => {
             <h3 className="text-xl font-bold text-black mb-4">For Customers</h3>
             <ol className="space-y-4 text-gray-700 list-decimal pl-5">
               <li>
-                <span className="text-bnpl-blue font-semibold">Sign Up & Build Credit Score:</span> Join Safarigamers and start with a base Credit Score. Buy 5+ items or spend $200 to grow it.
+                <span className="text-bnpl-blue font-semibold">Sign Up & Build Credit Score:</span> Join bnpland start with a base Credit Score. Buy 5+ items or spend $200 to grow it.
               </li>
               <li>
-                <span className="text-bnpl-blue font-semibold">Shop with Your Score:</span> Use Safarigamers at checkout—your score determines eligibility (e.g., $699 item needs $500 spent).
+                <span className="text-bnpl-blue font-semibold">Shop with Your Score:</span> Use bnplat checkout—your score determines eligibility (e.g., $699 item needs $500 spent).
               </li>
               <li>
                 <span className="text-bnpl-blue font-semibold">Pay Later & Boost Score:</span> Choose 3, 6, or 12 months. On-time payments raise your score (e.g., +$200 after 3 payments).
@@ -339,13 +339,13 @@ const LandingPage = () => {
             <h3 className="text-xl font-bold text-black mb-4">For Customers</h3>
             <ul className="space-y-4 text-gray-700 list-disc pl-5">
               <li>
-                <span className="text-bnpl-blue font-semibold">Eligibility:</span> Must be 18+ and registered with bnpl. Credit Score based on purchase history determines Safarigamers limits.
+                <span className="text-bnpl-blue font-semibold">Eligibility:</span> Must be 18+ and registered with bnpl. Credit Score based on purchase history determines bnpllimits.
               </li>
               <li>
                 <span className="text-bnpl-blue font-semibold">Payments:</span> Choose 3, 6, or 12-month plans. Late payments may reduce your Credit Score and incur fees.
               </li>
               <li>
-                <span className="text-bnpl-blue font-semibold">Usage:</span> Safarigamers is available only at partner stores. No refunds for early repayments.
+                <span className="text-bnpl-blue font-semibold">Usage:</span> bnplis available only at partner stores. No refunds for early repayments.
               </li>
             </ul>
           </div>
@@ -353,13 +353,13 @@ const LandingPage = () => {
             <h3 className="text-xl font-bold text-black mb-4">For Merchants</h3>
             <ul className="space-y-4 text-gray-700 list-disc pl-5">
               <li>
-                <span className="text-bnpl-blue font-semibold">Partnership:</span> Must integrate Safarigamers via our API. Full payment issued upon sale.
+                <span className="text-bnpl-blue font-semibold">Partnership:</span> Must integrate bnplvia our API. Full payment issued upon sale.
               </li>
               <li>
-                <span className="text-bnpl-blue font-semibold">Fees:</span> A small transaction fee applies per Safarigamers sale. No chargebacks for non-payment by customers.
+                <span className="text-bnpl-blue font-semibold">Fees:</span> A small transaction fee applies per bnplsale. No chargebacks for non-payment by customers.
               </li>
               <li>
-                <span className="text-bnpl-blue font-semibold">Compliance:</span> Adhere to Safarigamers policies and local regulations for Safarigamers offerings.
+                <span className="text-bnpl-blue font-semibold">Compliance:</span> Adhere to bnplpolicies and local regulations for bnplofferings.
               </li>
             </ul>
           </div>

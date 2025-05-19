@@ -60,7 +60,7 @@ const ShopNow = () => {
     <div className="min-h-screen bg-gray-100 font-sans">
       <Navbar />
       <div className="max-w-7xl mx-auto py-12 px-6">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">Shop with Safarigamers </h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">Shop with bnpl</h1>
 
         {/* Credit Reminder Banner */}
         <div className="bg-white border border-gray-200 rounded-lg shadow-md mb-8 p-6 flex flex-col sm:flex-row justify-between items-center gap-4">
@@ -157,7 +157,7 @@ const ShopNow = () => {
         {/* Educational Footer */}
         <div className="mt-8 text-center">
           <p className="text-sm text-gray-600 italic">
-            Shop with ease using your Safarigamers credit. Split payments over time at checkout.{" "}
+            Shop with ease using your bnplcredit. Split payments over time at checkout.{" "}
             <Link to="/how-it-works" className="text-bnpl-blue hover:underline">
               Learn More
             </Link>
