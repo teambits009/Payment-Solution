@@ -142,7 +142,7 @@ const LandingPage = () => {
       <header className="bg-bnpl-blue text-white py-24 px-6 shadow-md">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Shop Now, Pay Later with Ease
+            Shop with Ease
           </h1>
           <p className="text-lg md:text-xl mb-8 max-w-2xl">
             Build your Credit Score with every purchase and unlock flexible payments.
