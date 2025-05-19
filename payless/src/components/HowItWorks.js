@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold">
           <Link to="/" className="hover:text-bnpl-light-blue transition">
-            Genesis
+            Safarigamers
           </Link>
         </div>
         <div className="hidden md:flex space-x-6 items-center">
@@ -88,7 +88,7 @@ const HowItWorks = () => {
         <header className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">How It Works</h1>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-            Learn how Genesis BNPL uses your Credit Score—built from your purchase history and spending—to unlock flexible shopping and drive merchant success.
+            Learn how Safarigamers BNPL uses your Credit Score—built from your purchase history and spending—to unlock flexible shopping and drive merchant success.
           </p>
         </header>
 
@@ -121,7 +121,7 @@ const HowItWorks = () => {
           <section id="customers" className="space-y-12">
             <h2 className="text-3xl font-bold text-gray-900 text-center">How It Works for Customers</h2>
             <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto">
-              With Genesis BNPL, your Credit Score—calculated from your purchases and spending—determines your ability to shop now and pay later. Here’s the detailed process:
+              With Safarigamers BNPL, your Credit Score—calculated from your purchases and spending—determines your ability to shop now and pay later. Here’s the detailed process:
             </p>
             {/* Rest of the customer section remains unchanged */}
             {/* Step 1: Sign Up */}
@@ -130,12 +130,12 @@ const HowItWorks = () => {
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Sign Up & Build Your Credit Score</h3>
                 <p className="text-gray-700 mb-4">
-                  Create a Genesis account with basic details (name, email, phone, ID). New users start with a base Credit Score. As you shop and spend consistently, your score grows, unlocking higher credit limits for BNPL purchases.
+                  Create a Safarigamers account with basic details (name, email, phone, ID). New users start with a base Credit Score. As you shop and spend consistently, your score grows, unlocking higher credit limits for BNPL purchases.
                 </p>
                 <ul className="list-disc pl-5 text-gray-700 space-y-2">
                   <li><strong>Base Score:</strong> Start with a $500 limit for new users.</li>
                   <li><strong>Score Growth:</strong> Buy 5+ products or spend $200+ to boost your score.</li>
-                  <li><strong>No External Credit Check:</strong> Your score is based solely on Genesis transactions.</li>
+                  <li><strong>No External Credit Check:</strong> Your score is based solely on Safarigamers transactions.</li>
                 </ul>
                 <p className="text-gray-600 italic mt-2">
                   Example: After signing up, your initial Credit Score qualifies you for a $500 limit.
@@ -151,7 +151,7 @@ const HowItWorks = () => {
           <section id="merchants" className="space-y-12">
             <h2 className="text-3xl font-bold text-gray-900 text-center">How It Works for Merchants</h2>
             <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto">
-              Partner with Genesis BNPL to leverage our Credit Score system—based on customer purchases and spending—to drive sales while we manage payments.
+              Partner with Safarigamers BNPL to leverage our Credit Score system—based on customer purchases and spending—to drive sales while we manage payments.
             </p>
             {/* Rest of the merchant section remains unchanged */}
             {/* Step 1: Register */}
@@ -160,7 +160,7 @@ const HowItWorks = () => {
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Register Your Business</h3>
                 <p className="text-gray-700 mb-4">
-                  Join Genesis as a merchant by submitting your business details. We’ll set you up to offer BNPL, where customer eligibility is determined by their Credit Score from Genesis transactions.
+                  Join Safarigamers as a merchant by submitting your business details. We’ll set you up to offer BNPL, where customer eligibility is determined by their Credit Score from Safarigamers transactions.
                 </p>
                 <ul className="list-disc pl-5 text-gray-700 space-y-2">
                   <li><strong>Quick Setup:</strong> Approved in 48 hours, no fees.</li>

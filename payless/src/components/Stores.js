@@ -7,7 +7,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold">
           <Link to="/" className="hover:text-bnpl-light-blue transition">
-            Genesis
+            Safarigamers
           </Link>
         </div>
         <div className="hidden md:flex space-x-6 items-center">
@@ -60,7 +60,7 @@ const ShopNow = () => {
     <div className="min-h-screen bg-gray-100 font-sans">
       <Navbar />
       <div className="max-w-7xl mx-auto py-12 px-6">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">Shop with Genesis BNPL</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">Shop with Safarigamers BNPL</h1>
 
         {/* Credit Reminder Banner */}
         <div className="bg-white border border-gray-200 rounded-lg shadow-md mb-8 p-6 flex flex-col sm:flex-row justify-between items-center gap-4">

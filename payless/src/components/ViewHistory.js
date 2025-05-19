@@ -146,7 +146,7 @@ const MerchantDashboard = () => {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="text-2xl font-bold">
             <Link to="/" className="hover:text-bnpl-light-blue transition">
-              Genesis
+              Safarigamers
             </Link>
           </div>
           <div className="flex space-x-6 items-center">
@@ -171,7 +171,7 @@ const MerchantDashboard = () => {
           <div className="bg-white p-6 rounded-md shadow-md border border-gray-200 text-center">
             <p className="text-lg font-semibold text-gray-700">Total BNPL Sales</p>
             <p className="text-3xl font-bold text-bnpl-blue">${dashboardData.totalSales.toLocaleString()}</p>
-            <p className="text-sm text-gray-500">All-time sales via Genesis BNPL</p>
+            <p className="text-sm text-gray-500">All-time sales via Safarigamers BNPL</p>
           </div>
           <div className="bg-white p-6 rounded-md shadow-md border border-gray-200 text-center">
             <p className="text-lg font-semibold text-gray-700">Pending Settlements</p>
@@ -284,7 +284,7 @@ const MerchantDashboard = () => {
       {/* Footer */}
       <footer className="bg-bnpl-blue text-white py-6 px-6 text-center">
         <p className="text-sm text-gray-200">
-          © 2025 Genesis. All rights reserved. |{" "}
+          © 2025 Safarigamers. All rights reserved. |{" "}
           <Link to="mailto:support@bnplsystem.com" className="text-bnpl-blue hover:underline">
             Support
           </Link>{" "}
@@ -333,7 +333,7 @@ export const CustomerPaymentHistory = () => {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="text-2xl font-bold">
             <Link to="/" className="hover:text-bnpl-light-blue transition">
-              Genesis
+              Safarigamers
             </Link>
           </div>
           <button
