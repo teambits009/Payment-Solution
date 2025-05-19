@@ -14,26 +14,26 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-bnpl-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
+    <nav className="bg-Safarigamers-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold">
-          <Link to="/" className="hover:text-bnpl-light-blue transition">
+          <Link to="/" className="hover:text-Safarigamers-light-blue transition">
             Safarigamers
           </Link>
         </div>
         <div className="hidden md:flex space-x-6 items-center">
-          <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
+          <Link to="/how-it-works" className="text-lg hover:text-Safarigamers-light-blue transition">
             How It Works
           </Link>
-          <Link to="/customers" className="text-lg hover:text-bnpl-light-blue transition">
+          <Link to="/customers" className="text-lg hover:text-Safarigamers-light-blue transition">
             For Customers
           </Link>
-          <Link to="/merchants" className="text-lg hover:text-bnpl-light-blue transition">
+          <Link to="/merchants" className="text-lg hover:text-Safarigamers-light-blue transition">
             For Merchants
           </Link>
           <button
             onClick={handleLogout}
-            className="bg-white text-bnpl-blue px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:text-white transition"
+            className="bg-white text-Safarigamers-blue px-6 py-2 rounded-md font-medium hover:bg-Safarigamers-light-blue hover:text-white transition"
           >
             Log Out
           </button>
@@ -49,20 +49,20 @@ const Navbar = () => {
         </div>
       </div>
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-bnpl-blue py-4">
+        <div className="md:hidden bg-Safarigamers-blue py-4">
           <div className="flex flex-col space-y-4 text-center">
-            <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
+            <Link to="/how-it-works" className="text-lg hover:text-Safarigamers-light-blue transition">
               How It Works
             </Link>
-            <Link to="/customers" className="text-lg hover:text-bnpl-light-blue transition">
+            <Link to="/customers" className="text-lg hover:text-Safarigamers-light-blue transition">
               For Customers
             </Link>
-            <Link to="/merchants" className="text-lg hover:text-bnpl-light-blue transition">
+            <Link to="/merchants" className="text-lg hover:text-Safarigamers-light-blue transition">
               For Merchants
             </Link>
             <button
               onClick={handleLogout}
-              className="bg-white text-bnpl-blue px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:text-white transition"
+              className="bg-white text-Safarigamers-blue px-6 py-2 rounded-md font-medium hover:bg-Safarigamers-light-blue hover:text-white transition"
             >
               Log Out
             </button>
@@ -85,7 +85,7 @@ const Card = ({ title, children }) => (
 const DownloadButton = ({ label, onClick }) => (
   <button
     onClick={onClick}
-    className="bg-bnpl-blue text-white px-4 py-2 rounded-md font-medium hover:bg-blue-800 transition-all duration-200"
+    className="bg-Safarigamers-blue text-white px-4 py-2 rounded-md font-medium hover:bg-blue-800 transition-all duration-200"
   >
     {label}
   </button>
@@ -245,17 +245,17 @@ const CustomerDashboard = () => {
       <div className="max-w-7xl mx-auto py-12 px-6">
         <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">Customer Dashboard</h2>
         <p className="text-xl font-semibold text-gray-700 text-center mb-8">
-          Welcome back, <span className="text-bnpl-blue">{customerName}</span>!
+          Welcome back, <span className="text-Safarigamers-blue">{customerName}</span>!
           {cart.length > 0 && (
             <span className="ml-4 text-sm text-gray-600">Cart: {cart.length} item(s)</span>
           )}
-          <button onClick={toggleAuth} className="ml-4 text-sm text-bnpl-blue underline">
+          <button onClick={toggleAuth} className="ml-4 text-sm text-Safarigamers-blue underline">
             {isAuthenticated ? "Logout" : "Login"}
           </button>
         </p>
 
         <Card title="Available Credit">
-          <div className="bg-bnpl-blue text-white p-6 rounded-md text-center">
+          <div className="bg-Safarigamers-blue text-white p-6 rounded-md text-center">
             <p className="text-4xl font-bold">${availableCredit.toFixed(2)}</p>
             <p className="text-sm mt-2">of ${totalCredit.toFixed(2)} total credit</p>
           </div>
@@ -404,14 +404,14 @@ const CustomerDashboard = () => {
               <div className="relative overflow-hidden rounded-lg shadow-md">
                 <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${currentDeal * 100}%)` }}>
                   {featuredDeals.map((deal) => (
-                    <div key={deal.name} className="min-w-full bg-bnpl-blue text-white p-6 flex justify-between items-center">
+                    <div key={deal.name} className="min-w-full bg-Safarigamers-blue text-white p-6 flex justify-between items-center">
                       <div>
                         <h4 className="text-lg font-bold">{deal.name}</h4>
                         <p className="text-md">{deal.category}</p>
                       </div>
                       <button
                         onClick={() => handleShopClick(deal)}
-                        className="bg-white text-bnpl-blue px-4 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:text-white"
+                        className="bg-white text-Safarigamers-blue px-4 py-2 rounded-md font-medium hover:bg-Safarigamers-light-blue hover:text-white"
                       >
                         Shop Deal
                       </button>
@@ -449,7 +449,7 @@ const CustomerDashboard = () => {
                           </div>
                           <button
                             onClick={() => handleShopClick(merchant)}
-                            className="text-bnpl-blue font-medium hover:underline hover:text-bnpl-light-blue"
+                            className="text-Safarigamers-blue font-medium hover:underline hover:text-Safarigamers-light-blue"
                           >
                             Shop
                           </button>
@@ -468,14 +468,14 @@ const CustomerDashboard = () => {
                     placeholder="Search merchants (e.g., TechStore)"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue text-gray-700 placeholder-gray-400"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-Safarigamers-blue text-gray-700 placeholder-gray-400"
                   />
                   <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </div>
                 <select
-                  className="w-full sm:w-48 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
+                  className="w-full sm:w-48 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-Safarigamers-blue"
                   value={sortOption}
                   onChange={(e) => setSortOption(e.target.value)}
                 >
@@ -494,7 +494,7 @@ const CustomerDashboard = () => {
                       key={category}
                       onClick={() => setSelectedCategory(category.toLowerCase().replace(" & ", "-"))}
                       className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-200 ${
-                        selectedCategory === category.toLowerCase().replace(" & ", "-") ? "bg-bnpl-blue text-white" : "bg-gray-100 text-gray-700 hover:bg-bnpl-blue hover:text-white"
+                        selectedCategory === category.toLowerCase().replace(" & ", "-") ? "bg-Safarigamers-blue text-white" : "bg-gray-100 text-gray-700 hover:bg-Safarigamers-blue hover:text-white"
                       }`}
                     >
                       {category}
@@ -512,7 +512,7 @@ const CustomerDashboard = () => {
                       key={tag}
                       onClick={() => setSelectedTags(prev => prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag])}
                       className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-200 ${
-                        selectedTags.includes(tag) ? "bg-bnpl-blue text-white" : "bg-gray-100 text-gray-700 hover:bg-bnpl-blue hover:text-white"
+                        selectedTags.includes(tag) ? "bg-Safarigamers-blue text-white" : "bg-gray-100 text-gray-700 hover:bg-Safarigamers-blue hover:text-white"
                       }`}
                     >
                       {tag}
@@ -542,7 +542,7 @@ const CustomerDashboard = () => {
                         </div>
                         <button
                           onClick={() => handleShopClick(merchant)}
-                          className="text-bnpl-blue font-medium hover:underline hover:text-bnpl-light-blue"
+                          className="text-Safarigamers-blue font-medium hover:underline hover:text-Safarigamers-light-blue"
                         >
                           Shop
                         </button>
@@ -572,7 +572,7 @@ const CustomerDashboard = () => {
                       </div>
                       <button
                         onClick={() => handleShopClick(merchant)}
-                        className="text-bnpl-blue font-medium hover:underline hover:text-bnpl-light-blue"
+                        className="text-Safarigamers-blue font-medium hover:underline hover:text-Safarigamers-light-blue"
                       >
                         Shop
                       </button>
@@ -585,7 +585,7 @@ const CustomerDashboard = () => {
             <div className="space-y-6">
               <button
                 onClick={() => setSelectedMerchant(null)}
-                className="text-bnpl-blue hover:underline mb-4"
+                className="text-Safarigamers-blue hover:underline mb-4"
               >
                 ← Back to Merchants
               </button>
@@ -610,9 +610,9 @@ const CustomerDashboard = () => {
                       <p className="text-gray-600">${product.price.toFixed(2)}</p>
                       <button
                         onClick={() => handleBuyNow(product)}
-                        className="mt-2 bg-bnpl-blue text-white px-4 py-2 rounded-md font-medium hover:bg-blue-800 transition-all duration-200 w-full"
+                        className="mt-2 bg-Safarigamers-blue text-white px-4 py-2 rounded-md font-medium hover:bg-blue-800 transition-all duration-200 w-full"
                       >
-                        Buy Now with BNPL
+                        Buy Now with Safarigamers
                       </button>
                     </div>
                   ))}
@@ -639,7 +639,7 @@ const CustomerDashboard = () => {
                   <button
                     key={method}
                     onClick={() => handlePurchase(method)}
-                    className="w-full bg-bnpl-blue text-white px-4 py-2 rounded-md font-medium hover:bg-blue-800 transition-all duration-200"
+                    className="w-full bg-Safarigamers-blue text-white px-4 py-2 rounded-md font-medium hover:bg-blue-800 transition-all duration-200"
                   >
                     Pay with {method}
                   </button>

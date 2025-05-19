@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 const MerchantDashboard = () => {
   const navigate = useNavigate();
 
-  // Mock data with BNPL purchase details and credit scores
+  // Mock data with Safarigamers purchase details and credit scores
   const [dashboardData] = useState({
     totalSales: 7500,
     pendingSettlements: 850,
@@ -104,19 +104,19 @@ const MerchantDashboard = () => {
   return (
     <div className="min-h-screen bg-gray-100 font-sans">
       {/* Navbar */}
-      <nav className="bg-bnpl-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
+      <nav className="bg-Safarigamers-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="text-2xl font-bold">
-            <Link to="/" className="hover:text-bnpl-light-blue transition">
+            <Link to="/" className="hover:text-Safarigamers-light-blue transition">
               Safarigamers
             </Link>
           </div>
           <div className="flex space-x-6 items-center">
             <span className="text-lg text-white">Welcome, Ann </span>
-            <span className="text-lg text-bnpl-light-blue">Dashboard</span>
+            <span className="text-lg text-Safarigamers-light-blue">Dashboard</span>
             <button
               onClick={handleLogout}
-              className="text-lg hover:text-bnpl-light-blue transition"
+              className="text-lg hover:text-Safarigamers-light-blue transition"
             >
               Logout
             </button>
@@ -131,9 +131,9 @@ const MerchantDashboard = () => {
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white p-6 rounded-md shadow-md border border-gray-200 text-center">
-            <p className="text-lg font-semibold text-gray-700">Total BNPL Sales</p>
-            <p className="text-3xl font-bold text-bnpl-blue">${dashboardData.totalSales.toLocaleString()}</p>
-            <p className="text-sm text-gray-500">All-time sales via Safarigamers BNPL</p>
+            <p className="text-lg font-semibold text-gray-700">Total Safarigamers Sales</p>
+            <p className="text-3xl font-bold text-Safarigamers-blue">${dashboardData.totalSales.toLocaleString()}</p>
+            <p className="text-sm text-gray-500">All-time sales via Safarigamers Safarigamers</p>
           </div>
           <div className="bg-white p-6 rounded-md shadow-md border border-gray-200 text-center">
             <p className="text-lg font-semibold text-gray-700">Pending Settlements</p>
@@ -148,9 +148,9 @@ const MerchantDashboard = () => {
         </div>
       </section>
 
-      {/* BNPL Transactions Table Section with Credit Worthiness */}
+      {/* Safarigamers Transactions Table Section with Credit Worthiness */}
       <section className="max-w-7xl mx-auto py-8 px-6 bg-white">
-        <h2 className="text-2xl font-bold text-black mb-4">BNPL Purchase Tracking</h2>
+        <h2 className="text-2xl font-bold text-black mb-4">Safarigamers Purchase Tracking</h2>
         <div className="overflow-x-auto">
           <table className="w-full border border-gray-200 rounded-md shadow-md">
             <thead className="bg-gray-50">
@@ -158,7 +158,7 @@ const MerchantDashboard = () => {
                 {/* Top Section: Customer Details */}
                 <th className="text-gray-700 font-semibold p-4 text-left">Customer Name</th>
                 <th className="text-gray-700 font-semibold p-4 text-left">Contact</th>
-                {/* Middle Section: BNPL Plan Info */}
+                {/* Middle Section: Safarigamers Plan Info */}
                 <th className="text-gray-700 font-semibold p-4 text-left">Order ID</th>
                 <th className="text-gray-700 font-semibold p-4 text-left">Date & Time</th>
                 <th className="text-gray-700 font-semibold p-4 text-left">Amount</th>
@@ -177,7 +177,7 @@ const MerchantDashboard = () => {
                   {/* Customer Details */}
                   <td className="p-4 text-gray-700">{txn.customer}</td>
                   <td className="p-4 text-gray-700">{txn.contact}</td>
-                  {/* BNPL Plan Info */}
+                  {/* Safarigamers Plan Info */}
                   <td className="p-4 text-gray-700">{txn.orderId}</td>
                   <td className="p-4 text-gray-700">{txn.dateTime}</td>
                   <td className="p-4 text-gray-700">${txn.amount.toFixed(2)}</td>
@@ -212,7 +212,7 @@ const MerchantDashboard = () => {
                       </button>
                       <button
                         onClick={() => handleViewPaymentHistory(txn.orderId)}
-                        className="px-3 py-1 bg-bnpl-blue text-white rounded-md text-sm font-medium hover:bg-blue-800 transition-all duration-200"
+                        className="px-3 py-1 bg-Safarigamers-blue text-white rounded-md text-sm font-medium hover:bg-blue-800 transition-all duration-200"
                       >
                         View History
                       </button>
@@ -223,7 +223,7 @@ const MerchantDashboard = () => {
             </tbody>
           </table>
         </div>
-        <div className="flex justify-between mt-4 text-bnpl-blue">
+        <div className="flex justify-between mt-4 text-Safarigamers-blue">
           <span>Showing 1-5 of 20</span>
           <div className="space-x-2">
             <button className="hover:underline">Previous</button>
@@ -237,7 +237,7 @@ const MerchantDashboard = () => {
         <p className="text-lg text-gray-700 mb-6">
           Withdraw your pending settlements to your linked bank account.
         </p>
-        <p className="text-xl font-semibold text-bnpl-blue mb-2">
+        <p className="text-xl font-semibold text-Safarigamers-blue mb-2">
           Available to Withdraw: ${dashboardData.pendingSettlements.toLocaleString()}
         </p>
         <p className="text-sm text-gray-500 mb-6">
@@ -245,25 +245,25 @@ const MerchantDashboard = () => {
         </p>
         <button
           onClick={handleWithdraw}
-          className="bg-bnpl-blue text-white px-8 py-4 rounded-md font-medium text-lg hover:bg-blue-800 transition-all duration-200"
+          className="bg-Safarigamers-blue text-white px-8 py-4 rounded-md font-medium text-lg hover:bg-blue-800 transition-all duration-200"
         >
           Withdraw Funds
         </button>
       </section>
 
       {/* Footer */}
-      <footer className="bg-bnpl-blue text-white py-6 px-6 text-center">
+      <footer className="bg-Safarigamers-blue text-white py-6 px-6 text-center">
         <p className="text-sm text-gray-200">
           © 2025 Safarigamers. All rights reserved. |{" "}
-          <Link to="mailto:support@bnplsystem.com" className="text-bnpl-blue hover:underline">
+          <Link to="mailto:support@Safarigamerssystem.com" className="text-Safarigamers-blue hover:underline">
             Support
           </Link>{" "}
           Privacy Policy{" "}
-          <Link to="/terms-and-conditions" className="text-bnpl-blue hover:underline">
+          <Link to="/terms-and-conditions" className="text-Safarigamers-blue hover:underline">
             Privacy Policy
           </Link>{" "}
           Terms and Conditions{" "}
-          <Link to="/privacy" className="text-bnpl-blue hover:underline">
+          <Link to="/privacy" className="text-Safarigamers-blue hover:underline">
             Privacy
           </Link>
         </p>

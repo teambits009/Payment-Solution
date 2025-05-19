@@ -40,26 +40,26 @@ const MerchantSignup = () => {
   return (
     <div className="min-h-screen bg-gray-100 font-sans">
       {/* Navbar (PayPal-inspired, updated for Merchant focus) */}
-      <nav className="bg-bnpl-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
+      <nav className="bg-Safarigamers-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="text-2xl font-bold">
-            <Link to="/" className="hover:text-bnpl-light-blue transition">
+            <Link to="/" className="hover:text-Safarigamers-light-blue transition">
               Safarigamers
             </Link>
           </div>
           <div className="hidden md:flex space-x-6 items-center">
-            <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
+            <Link to="/how-it-works" className="text-lg hover:text-Safarigamers-light-blue transition">
               How It Works
             </Link>
-            <Link to="/stores" className="text-lg hover:text-bnpl-light-blue transition">
+            <Link to="/stores" className="text-lg hover:text-Safarigamers-light-blue transition">
               Stores
             </Link>
-            <Link to="/merchant-signup" className="text-lg hover:text-bnpl-light-blue transition">
+            <Link to="/merchant-signup" className="text-lg hover:text-Safarigamers-light-blue transition">
               For Merchants
             </Link>
             <Link
               to="/login"
-              className="border border-white px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:border-bnpl-light-blue transition"
+              className="border border-white px-6 py-2 rounded-md font-medium hover:bg-Safarigamers-light-blue hover:border-Safarigamers-light-blue transition"
             >
               Login
             </Link>
@@ -75,20 +75,20 @@ const MerchantSignup = () => {
           </div>
         </div>
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-bnpl-blue py-4">
+          <div className="md:hidden bg-Safarigamers-blue py-4">
             <div className="flex flex-col space-y-4 text-center">
-              <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
+              <Link to="/how-it-works" className="text-lg hover:text-Safarigamers-light-blue transition">
                 How It Works
               </Link>
-              <Link to="/stores" className="text-lg hover:text-bnpl-light-blue transition">
+              <Link to="/stores" className="text-lg hover:text-Safarigamers-light-blue transition">
                 Stores
               </Link>
-              <Link to="/merchant-signup" className="text-lg hover:text-bnpl-light-blue transition">
+              <Link to="/merchant-signup" className="text-lg hover:text-Safarigamers-light-blue transition">
                 For Merchants
               </Link>
               <Link
                 to="/login"
-                className="border border-white px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:border-bnpl-light-blue transition"
+                className="border border-white px-6 py-2 rounded-md font-medium hover:bg-Safarigamers-light-blue hover:border-Safarigamers-light-blue transition"
               >
                 Login
               </Link>
@@ -114,7 +114,7 @@ const MerchantSignup = () => {
                 name="businessName"
                 value={formData.businessName}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-Safarigamers-blue"
                 required
               />
             </div>
@@ -128,7 +128,7 @@ const MerchantSignup = () => {
                 name="contactName"
                 value={formData.contactName}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-Safarigamers-blue"
                 required
               />
             </div>
@@ -142,7 +142,7 @@ const MerchantSignup = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-Safarigamers-blue"
                 required
               />
             </div>
@@ -156,7 +156,7 @@ const MerchantSignup = () => {
                 name="certificateOfIncorporation"
                 value={formData.certificateOfIncorporation}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-Safarigamers-blue"
                 required
               />
             </div>
@@ -170,7 +170,7 @@ const MerchantSignup = () => {
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-Safarigamers-blue"
                 required
               />
             </div>
@@ -184,7 +184,7 @@ const MerchantSignup = () => {
                 name="confirmPassword"
                 value={formData.confirmPassword}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-Safarigamers-blue"
                 required
               />
             </div>
@@ -195,41 +195,41 @@ const MerchantSignup = () => {
                 name="termsAccepted"
                 checked={formData.termsAccepted}
                 onChange={handleChange}
-                className="h-4 w-4 text-bnpl-blue focus:ring-bnpl-blue border-gray-300 rounded"
+                className="h-4 w-4 text-Safarigamers-blue focus:ring-Safarigamers-blue border-gray-300 rounded"
                 required
               />
               <label htmlFor="termsAccepted" className="ml-2 text-sm text-gray-700">
                 I agree to the{" "}
-                <Link to="/terms" className="text-bnpl-blue hover:underline font-medium">
+                <Link to="/terms" className="text-Safarigamers-blue hover:underline font-medium">
                   Terms and Conditions
                 </Link>{" "}
                 and{" "}
-                <Link to="/privacy" className="text-bnpl-blue hover:underline font-medium">
+                <Link to="/privacy" className="text-Safarigamers-blue hover:underline font-medium">
                   Privacy Policy
                 </Link>
               </label>
             </div>
             <p className="text-sm text-gray-600 text-center">
-              Join to <span className="text-bnpl-blue font-semibold">increase sales</span>, get{" "}
-              <span className="text-bnpl-blue font-semibold">paid upfront</span>, and integrate BNPL{" "}
-              <span className="text-bnpl-blue font-semibold">easily</span>.
+              Join to <span className="text-Safarigamers-blue font-semibold">increase sales</span>, get{" "}
+              <span className="text-Safarigamers-blue font-semibold">paid upfront</span>, and integrate Safarigamers{" "}
+              <span className="text-Safarigamers-blue font-semibold">easily</span>.
             </p>
             <button
               type="submit"
-              className="w-full bg-bnpl-blue text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-all duration-200"
+              className="w-full bg-Safarigamers-blue text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-all duration-200"
             >
               Sign Up as a Merchant
             </button>
           </form>
           <p className="mt-6 text-center text-gray-700">
             Already have an account?{" "}
-            <Link to="/login" className="text-bnpl-blue hover:underline font-medium">
+            <Link to="/login" className="text-Safarigamers-blue hover:underline font-medium">
               Log In
             </Link>
           </p>
           <p className="mt-2 text-center text-gray-700">
             Signing up as a customer?{" "}
-            <Link to="/customer-signup" className="text-bnpl-blue hover:underline font-medium">
+            <Link to="/customer-signup" className="text-Safarigamers-blue hover:underline font-medium">
               Customer Signup
             </Link>
           </p>

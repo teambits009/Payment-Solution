@@ -10,26 +10,26 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-bnpl-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
+    <nav className="bg-Safarigamers-blue text-white py-4 px-6 sticky top-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold">
-          <Link to="/" className="hover:text-bnpl-light-blue transition">
+          <Link to="/" className="hover:text-Safarigamers-light-blue transition">
             Safarigamers
           </Link>
         </div>
         <div className="hidden md:flex space-x-6 items-center">
-          <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
+          <Link to="/how-it-works" className="text-lg hover:text-Safarigamers-light-blue transition">
             How It Works
           </Link>
-          <Link to="/customers" className="text-lg hover:text-bnpl-light-blue transition">
+          <Link to="/customers" className="text-lg hover:text-Safarigamers-light-blue transition">
             For Customers
           </Link>
-          <Link to="/merchants" className="text-lg hover:text-bnpl-light-blue transition">
+          <Link to="/merchants" className="text-lg hover:text-Safarigamers-light-blue transition">
             For Merchants
           </Link>
           <button
             onClick={handleLogout}
-            className="bg-white text-bnpl-blue px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:text-white transition"
+            className="bg-white text-Safarigamers-blue px-6 py-2 rounded-md font-medium hover:bg-Safarigamers-light-blue hover:text-white transition"
           >
             Log Out
           </button>
@@ -45,20 +45,20 @@ const Navbar = () => {
         </div>
       </div>
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-bnpl-blue py-4">
+        <div className="md:hidden bg-Safarigamers-blue py-4">
           <div className="flex flex-col space-y-4 text-center">
-            <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
+            <Link to="/how-it-works" className="text-lg hover:text-Safarigamers-light-blue transition">
               How It Works
             </Link>
-            <Link to="/customers" className="text-lg hover:text-bnpl-light-blue transition">
+            <Link to="/customers" className="text-lg hover:text-Safarigamers-light-blue transition">
               For Customers
             </Link>
-            <Link to="/merchants" className="text-lg hover:text-bnpl-light-blue transition">
+            <Link to="/merchants" className="text-lg hover:text-Safarigamers-light-blue transition">
               For Merchants
             </Link>
             <button
               onClick={handleLogout}
-              className="bg-white text-bnpl-blue px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:text-white transition"
+              className="bg-white text-Safarigamers-blue px-6 py-2 rounded-md font-medium hover:bg-Safarigamers-light-blue hover:text-white transition"
             >
               Log Out
             </button>
@@ -69,7 +69,7 @@ const Navbar = () => {
   );
 };
 
-const ApplyForBNPL = () => {
+const ApplyForSafarigamers = () => {
   const customerName = "Brandon Opere";
   const availableCredit = 1500.00;
   const creditHistory = {
@@ -103,7 +103,7 @@ const ApplyForBNPL = () => {
       alert("Purchase amount exceeds available credit!");
       return;
     }
-    console.log("BNPL Application Data:", { ...formData, creditHistory });
+    console.log("Safarigamers Application Data:", { ...formData, creditHistory });
     navigate("/customer-dashboard");
   };
 
@@ -112,17 +112,17 @@ const ApplyForBNPL = () => {
       <Navbar />
       <div className="max-w-7xl mx-auto py-12 px-6 flex justify-center">
         <div className="bg-white p-8 rounded-md shadow-md border border-gray-200 w-full max-w-lg">
-          <h1 className="text-3xl font-bold text-black mb-6 text-center">Apply for BNPL</h1>
+          <h1 className="text-3xl font-bold text-black mb-6 text-center">Apply for Safarigamers</h1>
 
           {/* Professional Available Credit Section */}
           <div className="bg-white border border-gray-200 rounded-md shadow-sm mb-6">
-            <div className="bg-bnpl-blue text-white p-6 rounded-t-md">
+            <div className="bg-Safarigamers-blue text-white p-6 rounded-t-md">
               <h2 className="text-xl font-semibold text-center">Credit Overview</h2>
             </div>
             <div className="p-4 space-y-4"> 
-              <div className="flex justify-between items-center bg-bnpl-blue-light p-4 rounded-md">
+              <div className="flex justify-between items-center bg-Safarigamers-blue-light p-4 rounded-md">
                 <span className="text-gray-700 font-medium">Available Credit:</span>
-                <span className="text-2xl font-bold text-bnpl-blue">${availableCredit.toFixed(2)}</span>
+                <span className="text-2xl font-bold text-Safarigamers-blue">${availableCredit.toFixed(2)}</span>
               </div>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="flex justify-between">
@@ -156,7 +156,7 @@ const ApplyForBNPL = () => {
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-Safarigamers-blue"
                 required
                 disabled
               />
@@ -171,7 +171,7 @@ const ApplyForBNPL = () => {
                 name="phoneNumber"
                 value={formData.phoneNumber}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-Safarigamers-blue"
                 required
                 placeholder="+1 (123) 456-7890"
               />
@@ -186,7 +186,7 @@ const ApplyForBNPL = () => {
                 name="merchantName"
                 value={formData.merchantName}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-Safarigamers-blue"
                 required
                 placeholder="e.g., TechStore"
               />
@@ -201,7 +201,7 @@ const ApplyForBNPL = () => {
                 name="purchaseAmount"
                 value={formData.purchaseAmount}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-Safarigamers-blue"
                 required
                 min="1"
                 step="0.01"
@@ -218,7 +218,7 @@ const ApplyForBNPL = () => {
                 name="itemDescription"
                 value={formData.itemDescription}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-Safarigamers-blue"
                 required
                 rows="3"
                 placeholder="e.g., Laptop Model XYZ"
@@ -233,7 +233,7 @@ const ApplyForBNPL = () => {
                 name="planDuration"
                 value={formData.planDuration}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-Safarigamers-blue"
                 required
               >
                 <option value="3">3 Months</option>
@@ -250,7 +250,7 @@ const ApplyForBNPL = () => {
                 name="paymentMethod"
                 value={formData.paymentMethod}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-Safarigamers-blue"
                 required
               >
                 <option value="Card">Credit/Debit Card</option>
@@ -268,7 +268,7 @@ const ApplyForBNPL = () => {
                 name="monthlyIncome"
                 value={formData.monthlyIncome}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-Safarigamers-blue"
                 required
                 min="0"
                 step="0.01"
@@ -284,7 +284,7 @@ const ApplyForBNPL = () => {
                 name="purchaseReason"
                 value={formData.purchaseReason}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bnpl-blue"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-Safarigamers-blue"
                 rows="3"
                 placeholder="e.g., Need a new laptop for work"
               />
@@ -292,7 +292,7 @@ const ApplyForBNPL = () => {
             <div className="flex justify-between space-x-4">
               <button
                 type="submit"
-                className="w-full bg-bnpl-blue text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-all duration-200"
+                className="w-full bg-Safarigamers-blue text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-all duration-200"
               >
                 Submit Application
               </button>
@@ -310,4 +310,4 @@ const ApplyForBNPL = () => {
   );
 };
 
-export default ApplyForBNPL;
+export default ApplyForSafarigamers;
