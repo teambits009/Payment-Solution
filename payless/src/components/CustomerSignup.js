@@ -42,7 +42,7 @@ const CustomerSignup = () => {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="text-2xl font-bold">
             <Link to="/" className="hover:text-bnpl-light-blue transition">
-              bnpl
+              Safarigamers
             </Link>
           </div>
           <div className="hidden md:flex space-x-6 items-center">

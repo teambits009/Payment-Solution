@@ -44,17 +44,17 @@ const MerchantSignup = () => {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="text-2xl font-bold">
             <Link to="/" className="hover:text-bnpl-light-blue transition">
-              bnpl
+              Safarigamers
             </Link>
           </div>
           <div className="hidden md:flex space-x-6 items-center">
             <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
               How It Works
             </Link>
-            <Link to="/stores" className="text-lg hover:text-bnpl-light-blue transition">
+            <Link to="/stores" className="text-lg hover:text-Safarigamers-light-blue transition">
               Stores
             </Link>
-            <Link to="/merchant-signup" className="text-lg hover:text-bnpl-light-blue transition">
+            <Link to="/merchant-signup" className="text-lg hover:text-Safarigamers-light-blue transition">
               For Merchants
             </Link>
             <Link

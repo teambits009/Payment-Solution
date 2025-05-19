@@ -61,11 +61,11 @@ const LandingPage = () => {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="text-2xl font-bold">
             <Link to="/" className="hover:text-bnpl-light-blue transition">
-              bnpl
+              Safarigamers
             </Link>
           </div>
           <div className="hidden md:flex space-x-6 items-center">
-            <Link to="/how-it-works" className="text-lg hover:text-bnpl-light-blue transition">
+            <Link to="/how-it-works" className="text-lg hover:text-Safarigamers-light-blue transition">
               How It Works
             </Link>
             <button
@@ -201,7 +201,7 @@ const LandingPage = () => {
       {/* Merchant Benefits Section */}
       <section className="max-w-7xl mx-auto py-12 px-6">
         <h2 className="text-3xl font-bold text-black text-center mb-10">
-          Boost Your Business with bnpl
+          Boost Your Business with Safarigamers
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white p-8 rounded-md shadow-md border border-gray-200 text-center">
@@ -222,7 +222,7 @@ const LandingPage = () => {
             <div className="text-bnpl-blue text-4xl mb-4">⚙️</div>
             <h3 className="text-xl font-bold text-black mb-4">Easy Integration</h3>
             <p className="text-gray-700">
-              Add bnpl to your store effortlessly.
+              Add Safarigamers to your store effortlessly.
             </p>
           </div>
         </div>
@@ -248,10 +248,10 @@ const LandingPage = () => {
             <h3 className="text-xl font-bold text-black mb-4">For Customers</h3>
             <ol className="space-y-4 text-gray-700 list-decimal pl-5">
               <li>
-                <span className="text-bnpl-blue font-semibold">Sign Up & Build Credit Score:</span> Join bnpl and start with a base Credit Score. Buy 5+ items or spend $200 to grow it.
+                <span className="text-bnpl-blue font-semibold">Sign Up & Build Credit Score:</span> Join Safarigamers and start with a base Credit Score. Buy 5+ items or spend $200 to grow it.
               </li>
               <li>
-                <span className="text-bnpl-blue font-semibold">Shop with Your Score:</span> Use bnpl at checkout—your score determines eligibility (e.g., $699 item needs $500 spent).
+                <span className="text-bnpl-blue font-semibold">Shop with Your Score:</span> Use Safarigamers at checkout—your score determines eligibility (e.g., $699 item needs $500 spent).
               </li>
               <li>
                 <span className="text-bnpl-blue font-semibold">Pay Later & Boost Score:</span> Choose 3, 6, or 12 months. On-time payments raise your score (e.g., +$200 after 3 payments).
@@ -271,7 +271,7 @@ const LandingPage = () => {
                 <span className="text-bnpl-blue font-semibold">Register:</span> Join our network—customer eligibility is based on their Credit Score from purchases.
               </li>
               <li>
-                <span className="text-bnpl-blue font-semibold">Offer bnpl:</span> Let customers shop with their score—higher scores mean bigger sales.
+                <span className="text-bnpl-blue font-semibold">Offer Safarigamers:</span> Let customers shop with their score—higher scores mean bigger sales.
               </li>
               <li>
                 <span className="text-bnpl-blue font-semibold">Get Paid:</span> Receive full payment upfront while we handle repayments tied to their score.
@@ -339,13 +339,13 @@ const LandingPage = () => {
             <h3 className="text-xl font-bold text-black mb-4">For Customers</h3>
             <ul className="space-y-4 text-gray-700 list-disc pl-5">
               <li>
-                <span className="text-bnpl-blue font-semibold">Eligibility:</span> Must be 18+ and registered with bnpl. Credit Score based on purchase history determines bnpl limits.
+                <span className="text-bnpl-blue font-semibold">Eligibility:</span> Must be 18+ and registered with bnpl. Credit Score based on purchase history determines Safarigamers limits.
               </li>
               <li>
                 <span className="text-bnpl-blue font-semibold">Payments:</span> Choose 3, 6, or 12-month plans. Late payments may reduce your Credit Score and incur fees.
               </li>
               <li>
-                <span className="text-bnpl-blue font-semibold">Usage:</span> bnpl is available only at partner stores. No refunds for early repayments.
+                <span className="text-bnpl-blue font-semibold">Usage:</span> Safarigamers is available only at partner stores. No refunds for early repayments.
               </li>
             </ul>
           </div>
@@ -353,13 +353,13 @@ const LandingPage = () => {
             <h3 className="text-xl font-bold text-black mb-4">For Merchants</h3>
             <ul className="space-y-4 text-gray-700 list-disc pl-5">
               <li>
-                <span className="text-bnpl-blue font-semibold">Partnership:</span> Must integrate bnpl bnpl via our API. Full payment issued upon sale.
+                <span className="text-bnpl-blue font-semibold">Partnership:</span> Must integrate Safarigamers via our API. Full payment issued upon sale.
               </li>
               <li>
-                <span className="text-bnpl-blue font-semibold">Fees:</span> A small transaction fee applies per bnpl sale. No chargebacks for non-payment by customers.
+                <span className="text-bnpl-blue font-semibold">Fees:</span> A small transaction fee applies per Safarigamers sale. No chargebacks for non-payment by customers.
               </li>
               <li>
-                <span className="text-bnpl-blue font-semibold">Compliance:</span> Adhere to bnpl policies and local regulations for bnpl offerings.
+                <span className="text-bnpl-blue font-semibold">Compliance:</span> Adhere to Safarigamers policies and local regulations for Safarigamers offerings.
               </li>
             </ul>
           </div>
@@ -370,11 +370,11 @@ const LandingPage = () => {
       <footer className="bg-bnpl-blue text-white py-12 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">bnpl</h3>
+            <h3 className="text-2xl font-bold mb-4">Safarigamers</h3>
             <p className="text-gray-200 mb-4">
               Empowering flexible payments for customers and growth for merchants since 2025.
             </p>
-            <p className="text-sm">© 2025 bnpl. All rights reserved.</p>
+            <p className="text-sm">© 2025 Safarigamers. All rights reserved.</p>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Explore</h4>
@@ -404,7 +404,7 @@ const LandingPage = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Get in Touch</h4>
             <p className="text-gray-200 mb-2">
-              Email: <Link to="mailto:support@bnplsystem.com" className="hover:text-bnpl-light-blue">support@bnplsystem.com</Link>
+              Email: <Link to="mailto:support@bnplsystem.com" className="hover:text-bnpl-light-blue">support@Safarigamerssystem.com</Link>
             </p>
             <p className="text-gray-200 mb-2">
               Phone: <span className="font-medium">+1 (800) 123-4567</span>

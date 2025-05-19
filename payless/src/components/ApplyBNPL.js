@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold">
           <Link to="/" className="hover:text-bnpl-light-blue transition">
-            bnpl
+            Safarigamers
           </Link>
         </div>
         <div className="hidden md:flex space-x-6 items-center">
@@ -112,7 +112,7 @@ const ApplyForbnpl = () => {
       <Navbar />
       <div className="max-w-7xl mx-auto py-12 px-6 flex justify-center">
         <div className="bg-white p-8 rounded-md shadow-md border border-gray-200 w-full max-w-lg">
-          <h1 className="text-3xl font-bold text-black mb-6 text-center">Apply for bnpl</h1>
+          <h1 className="text-3xl font-bold text-black mb-6 text-center">Apply for Safarigamers</h1>
 
           {/* Professional Available Credit Section */}
           <div className="bg-white border border-gray-200 rounded-md shadow-sm mb-6">
@@ -310,4 +310,4 @@ const ApplyForbnpl = () => {
   );
 };
 
-export default ApplyForbnpl;
+export default ApplyForSafarigamers;

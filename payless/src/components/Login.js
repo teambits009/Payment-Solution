@@ -10,7 +10,7 @@ const Navbar = ({ signupPath, signupText }) => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold">
           <Link to="/" className="hover:text-BNPL-light-blue transition">
-            BNPL
+            Safarigamers
           </Link>
         </div>
         <div className="hidden md:flex space-x-6 items-center">

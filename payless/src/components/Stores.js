@@ -7,7 +7,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold">
           <Link to="/" className="hover:text-bnpl-light-blue transition">
-            bnpl
+            Safarigamers
           </Link>
         </div>
         <div className="hidden md:flex space-x-6 items-center">
@@ -60,13 +60,13 @@ const ShopNow = () => {
     <div className="min-h-screen bg-gray-100 font-sans">
       <Navbar />
       <div className="max-w-7xl mx-auto py-12 px-6">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">Shop with bnpl bnpl</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">Shop with Safarigamers </h1>
 
         {/* Credit Reminder Banner */}
         <div className="bg-white border border-gray-200 rounded-lg shadow-md mb-8 p-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-gray-700 font-medium text-center sm:text-left relative group">
             You have{" "}
-            <span className="text-bnpl-blue font-bold">${availableCredit.toFixed(2)}</span> available to shop with bnpl!
+            <span className="text-bnpl-blue font-bold">${availableCredit.toFixed(2)}</span> available to shop with Safarigamers!
             <span className="absolute hidden group-hover:block bg-gray-800 text-white text-xs rounded p-2 -top-10 left-1/2 transform -translate-x-1/2 sm:left-0 sm:translate-x-0 z-10 w-48">
               Split your purchases into affordable payments!
             </span>
@@ -157,7 +157,7 @@ const ShopNow = () => {
         {/* Educational Footer */}
         <div className="mt-8 text-center">
           <p className="text-sm text-gray-600 italic">
-            Shop with ease using your bnpl credit. Split payments over time at checkout.{" "}
+            Shop with ease using your Safarigamers credit. Split payments over time at checkout.{" "}
             <Link to="/how-it-works" className="text-bnpl-blue hover:underline">
               Learn More
             </Link>
