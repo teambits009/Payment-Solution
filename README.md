@@ -1,45 +1,45 @@
-# 💳 TechOps Apex – Buy Now, Pay Later (BNPL) Platform
+# 💳 Safari Gamers – Buy Now, Pay Later (BNPL) Platform
 
-**BNPL Payment Solution** is a flexible, credit-aware platform that allows **merchants to list products**, **customers to buy instantly or on credit**, and **admins to monitor platform-wide financial flows and commission fees**. Designed for inclusion and scalability, this BNPL system gives customers purchasing power while empowering merchants with fast, direct payments.
+**Safari Gamers BNPL Platform** is a flexible, credit-aware solution that enables **merchants to list products**, **customers to purchase instantly or on credit**, and **admins to monitor platform-wide financial flows and commission fees**. Designed for inclusivity and scalability, this BNPL system empowers customers with purchasing power while providing merchants with fast, direct payments.
 
 ---
 
 ![Open Source](https://img.shields.io/badge/status-active-success)
 ![License](https://img.shields.io/badge/license-MIT-blue)
-![Built by TechOps Apex](https://img.shields.io/badge/built%20by-TechOps%20Apex-purple)
+![Built by Safari Gamers](https://img.shields.io/badge/built%20by-Safari%20Gamers-purple)
 ![Fintech Focus](https://img.shields.io/badge/focus-Fintech-lightgrey)
 
 ---
 
 ## 🧩 Key Features
 
-- 🛍️ **Merchant Product Listings** — Merchants post and manage products via a dashboard  
-- 💳 **Buy Now, Pay Later Agreements** — Flexible 3, 6, or 12-month repayment plans with fair interest  
-- 🧠 **Dynamic Credit Scoring** — Behavioral + API-based scoring for real-time credit decisions  
-- 🤝 **Digital Contracts** — E-signed agreements for every deferred payment  
-- 📊 **Merchant Dashboard** — Track orders, repayments, customer eligibility  
-- 📱 **Customer App** — View credit limit, installment schedule, payment history  
-- 🧾 **Admin Console** — Track system-wide metrics and **5% platform fee earnings**
+* 🛍️ **Merchant Product Listings** — Merchants can post and manage products via a dedicated dashboard.
+* 💳 **Buy Now, Pay Later Agreements** — Offers flexible 3, 6, or 12-month repayment plans with transparent interest rates.
+* 🧠 **Dynamic Credit Scoring** — Combines behavioral data and external API-based scoring for real-time credit decisions.
+* 🤝 **Digital Contracts** — Generates e-signed agreements for every deferred payment.
+* 📊 **Merchant Dashboard** — Allows tracking of orders, repayments, and customer eligibility.
+* 📱 **Customer App** — Enables viewing of credit limits, installment schedules, and payment history.
+* 🧾 **Admin Console** — Provides oversight of system-wide metrics and 5% platform fee earnings.
 
 ---
 
-## 💰 How Payments Work
+## 💰 Payment Workflow
 
-- 💼 **Merchants receive funds directly** from customers at checkout
-- 🏦 A **5% platform fee** is automatically calculated and reflected to the **Admin dashboard**
-- 💸 Admins do not manage pooled funds but **earn per transaction**, commission-style
+* 💼 **Direct Merchant Payments** — Merchants receive funds directly from customers at checkout.
+* 🏦 **Platform Fee** — A 5% platform fee is automatically calculated and reflected in the Admin dashboard.
+* 💸 **Commission-Based Earnings** — Admins earn per transaction without managing pooled funds.
 
 ---
 
 ## 📆 Installment Plans & Interest Rates
 
-| Duration     | Interest Rate | Description                    |
-|--------------|----------------|--------------------------------|
-| 🗓️ 3 Months  | **5%**         | Short-term, low-risk           |
-| 🗓️ 6 Months  | **9%**         | Balanced repayment duration    |
-| 🗓️ 12 Months | **15%**        | Extended term, higher flexibility |
+| Duration      | Interest Rate | Description                       |
+| ------------- | ------------- | --------------------------------- |
+| 🗓️ 3 Months  | **5%**        | Short-term, low-risk              |
+| 🗓️ 6 Months  | **9%**        | Balanced repayment duration       |
+| 🗓️ 12 Months | **15%**       | Extended term, higher flexibility |
 
-All rates are clearly shown to the customer prior to contract signing.
+All rates are clearly presented to the customer prior to contract signing.
 
 ---
 
@@ -68,70 +68,77 @@ sequenceDiagram
 
 ---
 
-## 🧪 Tech Stack
+## 🧪 Technology Stack
 
-| Layer           | Technology                        |
-|-----------------|------------------------------------|
-| Backend         | FastAPI / Node.js                 |
-| Frontend        | React (Merchant), Flutter (Customer) |
-| Credit Engine   | ML scoring models, external APIs  |
-| Storage         | PostgreSQL, Redis                 |
-| Contracts       | IPFS or cloud + e-signature       |
-| Payments        | Stripe, Flutterwave, Paystack     |
-| Notifications   | Twilio (SMS), SendGrid (Email)    |
+| Layer         | Technology                                                       |
+| ------------- | ---------------------------------------------------------------- |
+| **Backend**   | **Go (Golang)** – High-performance API services                  |
+| **Frontend**  | **ReactJS** – Responsive web interfaces for merchants and admins |
+| Customer App  | Flutter (optional for mobile users)                              |
+| Credit Engine | Machine Learning models, external APIs                           |
+| Storage       | PostgreSQL, Redis                                                |
+| Contracts     | IPFS or cloud storage with e-signature                           |
+| Payments      | Stripe, Flutterwave, Paystack                                    |
+| Notifications | Twilio (SMS), SendGrid (Email)                                   |
 
 ---
 
-## 🧱 Key Modules
+## 🧱 Core Modules
 
 ### 1. 🧠 Credit Score Engine
-- Pulls behavioral and API financial data
-- Determines installment eligibility + dynamic credit limit
-- Rewards responsible behavior with better rates
+
+* **Data Integration**: Pulls behavioral and financial data via APIs.
+* **Eligibility Assessment**: Determines installment eligibility and dynamic credit limits.
+* **Incentivization**: Rewards responsible behavior with better rates.
 
 ### 2. 🤝 Agreement Engine
-- Generates digital contracts with repayment schedules
-- Tracks installments, penalties, and contract status
-- All agreements are securely stored and auditable
+
+* **Contract Generation**: Creates digital contracts with repayment schedules.
+* **Tracking**: Monitors installments, penalties, and contract status.
+* **Storage**: Ensures all agreements are securely stored and auditable.
 
 ### 3. 💸 Payment System
-- Customer pays merchant directly
-- 5% transaction fee charged to merchant, logged to Admin
-- No fund holding by platform — frictionless and fast
+
+* **Transaction Flow**: Customers pay merchants directly.
+* **Fee Management**: 5% transaction fee charged to merchants, logged to Admin.
+* **Efficiency**: No fund holding by the platform ensures frictionless and fast transactions.
 
 ### 4. 📊 Merchant Dashboard
-- Product inventory and pricing
-- Track customer agreement statuses
-- See platform fees paid
+
+* **Inventory Management**: Manage product listings and pricing.
+* **Customer Insights**: Track customer agreement statuses.
+* **Financial Overview**: View platform fees paid.
 
 ### 5. 📱 Customer Portal
-- View credit usage and repayment calendar
-- Get notifications and credit limit updates
-- Track performance history and score progression
+
+* **Credit Monitoring**: View credit usage and repayment calendar.
+* **Notifications**: Receive updates on credit limits and payment reminders.
+* **Performance Tracking**: Monitor payment history and credit score progression.
 
 ### 6. 🧾 Admin Console
-- See platform-wide sales and total earned fees
-- Manage fee rates, scoring thresholds, and activity logs
-- No need for fund custody or disbursement
+
+* **Analytics**: Access platform-wide sales and total earned fees.
+* **Configuration**: Manage fee rates, scoring thresholds, and activity logs.
+* **Operational Efficiency**: No need for fund custody or disbursement.
 
 ---
 
 ## 🔐 Security & Compliance
 
-- Encrypted contract data + secure agreement signing
-- PCI-DSS-compliant payment integrations
-- Biometric and 2FA options
-- GDPR/CCPA compliance
-- Real-time audit logging and rate-limiting
+* **Data Protection**: Encrypted contract data and secure agreement signing.
+* **Payment Security**: PCI-DSS-compliant payment integrations.
+* **User Authentication**: Biometric and Two-Factor Authentication (2FA) options.
+* **Regulatory Compliance**: Adheres to GDPR and CCPA standards.
+* **Monitoring**: Real-time audit logging and rate-limiting.
 
 ---
 
-## 🚀 What’s Next
+## 🚀 Future Enhancements
 
-- [ ] AI-driven fraud detection for early defaults
-- [ ] Tap-to-BNPL via NFC for POS systems
-- [ ] Micro-insurance upsell during checkout
-- [ ] Loyalty & credit-building rewards
+* [ ] **AI-Driven Fraud Detection**: Implement machine learning algorithms to detect early defaults.
+* [ ] **NFC Integration**: Enable Tap-to-BNPL via NFC for Point-of-Sale (POS) systems.
+* [ ] **Micro-Insurance**: Offer micro-insurance options during checkout.
+* [ ] **Loyalty Programs**: Introduce loyalty and credit-building rewards.
 
 ---
 
@@ -143,14 +150,15 @@ MIT License — [LICENSE](LICENSE)
 
 ## 💬 Contact Us
 
-- GitHub: [github.com/teambits009](https://github.com/teambits009)
-- Email: [brandon@techopsapex.com](mailto:brandon@techopsapex.com)
-- LinkedIn: [TechOps Apex](https://www.linkedin.com/in/brandon-opere-14b5a5203/)
+* **GitHub**: [github.com/safarigamers](https://github.com/safarigamers)
+* **Email**: [support@safarigamers.com](mailto:support@safarigamers.com)
+* **LinkedIn**: [Safari Gamers](https://www.linkedin.com/company/safari-gamers)
 
 ---
 
-> _“We’re not just building credit — we’re building confidence.”_
+> *“We’re not just building credit — we’re building confidence.”*
 
-Made with 💙 by **TechOps Apex — Fintech Division**
+Made with 💙 by **Safari Gamers — Fintech Division**
 
 ---
+
