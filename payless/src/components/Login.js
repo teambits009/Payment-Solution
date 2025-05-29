@@ -23,6 +23,9 @@ const Navbar = ({ signupPath, signupText }) => {
           <Link to="/login" className="text-lg hover:text-bnpl-light-blue transition">
             For Merchants
           </Link>
+          <Link to="/login" className="text-lg hover:text-bnpl-light-blue transition">
+            For Admins
+          </Link>
           <Link
             to={signupPath}
             className="bg-white text-bnpl-blue px-6 py-2 rounded-md font-medium hover:bg-bnpl-light-blue hover:text-white transition"
@@ -51,6 +54,9 @@ const Navbar = ({ signupPath, signupText }) => {
             </Link>
             <Link to="/login" className="text-lg hover:text-bnpl-light-blue transition">
               For Merchants
+            </Link>
+            <Link to="/login" className="text-lg hover:text-bnpl-light-blue transition">
+              For Admins
             </Link>
             <Link
               to={signupPath}
@@ -106,7 +112,7 @@ const SubmitButton = ({ text }) => (
 );
 
 // Reusable Links Section
-const LinksSection = ({ forgotPath = "/forgot-password", signupPath, signupText, alternatePath, alternateText }) => (
+const LinksSection = ({ forgotPath = "/forgot-password", signupPath, signupText }) => (
   <div className="mt-6 space-y-2 text-center text-gray-700">
     <p>
       <Link to={forgotPath} className="text-bnpl-blue hover:underline font-medium">
@@ -124,9 +130,10 @@ const LinksSection = ({ forgotPath = "/forgot-password", signupPath, signupText,
 
 // Main Login Component
 const Login = () => {
-  const [isMerchant, setIsMerchant] = useState(false);
+  const [loginType, setLoginType] = useState("customer"); // customer, merchant, or admin
   const [formData, setFormData] = useState({
     merchantId: "",
+    adminId: "",
     email: "",
     password: "",
   });
@@ -138,44 +145,77 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(`${isMerchant ? "Merchant" : "Customer"} Login Data:`, formData);
+    console.log(`${loginType.charAt(0).toUpperCase() + loginType.slice(1)} Login Data:`, formData);
     // Add API call here
-    navigate(isMerchant ? "/merchant-dashboard" : "/customer-dashboard");
+    if (loginType === "admin") {
+      navigate("/admin-dashboard");
+    } else if (loginType === "merchant") {
+      navigate("/merchant-dashboard");
+    } else {
+      navigate("/customer-dashboard");
+    }
   };
 
-  const toggleLoginType = () => {
-    setIsMerchant(!isMerchant);
-    setFormData({ merchantId: "", email: "", password: "" }); // Reset form on toggle
+  const handleToggle = (type) => {
+    setLoginType(type);
+    setFormData({ merchantId: "", adminId: "", email: "", password: "" }); // Reset form on toggle
   };
 
   return (
     <>
-      <Navbar signupPath={isMerchant ? "/merchant-signup" : "/customer-signup"} signupText="Sign Up" />
-      <FormContainer title={isMerchant ? "Merchant Log In" : "Customer Log In"}>
-        <div className="flex justify-center mb-6">
+      <Navbar
+        signupPath={
+          loginType === "merchant"
+            ? "/merchant-signup"
+            : loginType === "admin"
+            ? "/admin-signup"
+            : "/customer-signup"
+        }
+        signupText="Sign Up"
+      />
+      <FormContainer
+        title={
+          loginType === "merchant"
+            ? "Merchant Log In"
+            : loginType === "admin"
+            ? "Admin Log In"
+            : "Customer Log In"
+        }
+      >
+        <div className="flex justify-center mb-6 space-x-2">
           <button
-            onClick={toggleLoginType}
+            onClick={() => handleToggle("customer")}
             className={`px-4 py-2 rounded-md font-medium transition-all duration-200 ${
-              isMerchant
-                ? "bg-gray-200 text-gray-700"
-                : "bg-bnpl-blue text-white hover:bg-blue-800"
+              loginType === "customer"
+                ? "bg-bnpl-blue text-white hover:bg-blue-800"
+                : "bg-gray-200 text-gray-700"
             }`}
           >
             Customer
           </button>
           <button
-            onClick={toggleLoginType}
-            className={`ml-4 px-4 py-2 rounded-md font-medium transition-all duration-200 ${
-              isMerchant
+            onClick={() => handleToggle("merchant")}
+            className={`px-4 py-2 rounded-md font-medium transition-all duration-200 ${
+              loginType === "merchant"
                 ? "bg-bnpl-blue text-white hover:bg-blue-800"
                 : "bg-gray-200 text-gray-700"
             }`}
           >
             Merchant
           </button>
+          <button
+            onClick={() => handleToggle("admin")}
+            className={`px-4 py-2 rounded-md font-medium transition-all duration-200 ${
+              loginType === "admin"
+                ? "bg-bnpl-blue text-white hover:bg-blue-800"
+                : "bg-gray-200 text-gray-700"
+            }`}
+          >
+            Admin
+          </button>
         </div>
         <form onSubmit={handleSubmit} className="space-y-6">
-          {isMerchant && (
+          {loginType === "merchant" && (
             <InputField
               id="merchantId"
               label="Merchant ID"
@@ -185,9 +225,25 @@ const Login = () => {
               onChange={handleChange}
             />
           )}
+          {loginType === "admin" && (
+            <InputField
+              id="adminId"
+              label="Admin ID"
+              type="text"
+              name="adminId"
+              value={formData.adminId}
+              onChange={handleChange}
+            />
+          )}
           <InputField
             id="email"
-            label={isMerchant ? "Business Email" : "Email Address"}
+            label={
+              loginType === "merchant"
+                ? "Business Email"
+                : loginType === "admin"
+                ? "Admin Email"
+                : "Email Address"
+            }
             type="email"
             name="email"
             value={formData.email}
@@ -202,11 +258,17 @@ const Login = () => {
             onChange={handleChange}
           />
           <p className="text-sm text-gray-600 text-center">
-            {isMerchant ? (
+            {loginType === "merchant" ? (
               <>
                 Log in to <span className="text-bnpl-blue font-semibold">increase sales</span>, get{" "}
                 <span className="text-bnpl-blue font-semibold">paid upfront</span>, and manage bnpl{" "}
                 <span className="text-bnpl-blue font-semibold">easily</span>.
+              </>
+            ) : loginType === "admin" ? (
+              <>
+                Log in to <span className="text-bnpl-blue font-semibold">manage users</span>, oversee{" "}
+                <span className="text-bnpl-blue font-semibold">transactions</span>, and ensure{" "}
+                <span className="text-bnpl-blue font-semibold">platform security</span>.
               </>
             ) : (
               <>
@@ -219,10 +281,14 @@ const Login = () => {
           <SubmitButton text="Log In" />
         </form>
         <LinksSection
-          signupPath={isMerchant ? "/merchant-signup" : "/customer-signup"}
+          signupPath={
+            loginType === "merchant"
+              ? "/merchant-signup"
+              : loginType === "admin"
+              ? "/admin-signup"
+              : "/customer-signup"
+          }
           signupText="Sign Up"
-          alternatePath={isMerchant ? "/login" : "/merchant-login"}
-          alternateText={isMerchant ? "Customer" : "Merchant"}
         />
       </FormContainer>
     </>
