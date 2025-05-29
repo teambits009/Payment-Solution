@@ -60,7 +60,7 @@ const ShopNow = () => {
     <div className="min-h-screen bg-gray-100 font-sans">
       <Navbar />
       <div className="max-w-7xl mx-auto py-12 px-6">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">Shop with bnpl</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">Shop with Safarigamers</h1>
 
         {/* Credit Reminder Banner */}
         <div className="bg-white border border-gray-200 rounded-lg shadow-md mb-8 p-6 flex flex-col sm:flex-row justify-between items-center gap-4">

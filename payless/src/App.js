@@ -13,6 +13,7 @@ import HowItWorks from "./components/HowItWorks";
 import MerchantDashboard from "./components/MerchantDashboard";
 import { CustomerPaymentHistory } from "./components/ViewHistory";
 import ViewHistory from "./components/ViewHistory"; // Add this
+import AdminDashboard from "./components/AdminDashboard";
 
 
 
@@ -33,6 +34,8 @@ function App() {
        <Route path="/merchant-dashboard" element={<MerchantDashboard />} />
        <Route path="/customer-payment-history" element={<CustomerPaymentHistory />} />
        <Route path="/view-history" element={<ViewHistory />} /> {/* Add this */}
+       <Route path="/admin-dashboard" element={<AdminDashboard />} />
+       {/* Add more routes as needed */}
       </Routes>
     </Router>
   );
